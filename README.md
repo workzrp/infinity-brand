@@ -1,2 +1,1 @@
-# infinity-brand
-Apresentação da marca Infinity
+Infinity AI static website project
