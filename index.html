@@ -239,6 +239,17 @@
     .mascot-stage img { width: 82%; height: 500px; object-fit: contain; object-position: bottom center; transform-origin: bottom center; animation: mascotEnter .65s var(--ease) both; filter: drop-shadow(0 18px 24px rgba(0,0,0,.3)); }
     .mascot-stage .stage-caption { position: absolute; left: 20px; top: 20px; right: 20px; display: flex; justify-content: space-between; gap: 15px; align-items: center; font-size: 9px; letter-spacing: .18em; text-transform: uppercase; color: #95afbd; }
     .mascot-stage .stage-caption strong { color: var(--mascot-glow, var(--lime)); font-weight: 500; transition: color .4s; }
+    .mascot-scene-backdrop, .mascot-scene-shade { position:absolute; inset:0; opacity:0; visibility:hidden; transition:opacity .55s ease, visibility .55s ease; }
+    .mascot-scene-backdrop img { width:100%; height:100%; object-fit:cover; object-position:center; }
+    .mascot-scene-shade { background:linear-gradient(90deg,rgba(3,17,28,.12),rgba(3,17,28,.18) 48%,rgba(3,17,28,.62)),linear-gradient(0deg,rgba(3,17,28,.35),transparent 58%); }
+    .mascot-stage.is-scene { display:block; background:#061b2a; }
+    .mascot-stage.is-scene .mascot-scene-backdrop, .mascot-stage.is-scene .mascot-scene-shade { opacity:1; visibility:visible; }
+    .mascot-stage.is-scene #active-mascot { position:absolute; z-index:2; right:7%; bottom:0; width:43%; height:82%; object-fit:contain; object-position:bottom center; filter:drop-shadow(0 20px 32px rgba(0,0,0,.55)); }
+    .mascot-stage.is-scene::before { z-index:1; inset:auto 5% 3%; width:50%; height:15%; background:radial-gradient(ellipse,var(--mascot-glow),transparent 72%); opacity:.35; }
+    .mascot-view-switch { display:flex; flex-wrap:wrap; gap:8px; margin:0 0 22px; }
+    .mascot-view-button { border:1px solid rgba(182,224,240,.2); padding:11px 16px; color:#a5bac7; background:rgba(8,33,50,.48); font-size:10px; letter-spacing:.08em; text-transform:uppercase; cursor:pointer; transition:all .25s ease; }
+    .mascot-view-button:hover { border-color:rgba(180,231,237,.55); color:#fff; }
+    .mascot-view-button.is-active { color:#fff; border-color:var(--lime); background:rgba(20,59,74,.7); box-shadow:inset 0 -2px var(--lime); }
     .mascot-controls { min-width: 0; }
     .mascot-controls h3 { margin: 0 0 10px; font-family: "Arial Narrow", Impact, sans-serif; font-weight: 400; font-size: clamp(27px, 3.4vw, 47px); letter-spacing: -.02em; text-transform: uppercase; }
     .mascot-controls p { max-width: 430px; margin: 0 0 28px; color: #9eb4c1; font-size: 13px; line-height: 1.75; }
@@ -404,6 +415,10 @@
       .mascot-stage { min-height: 430px; height: 430px; }
       .mascot-stage img { height: 365px; width: 78%; }
       .mascot-stage .stage-caption { left: 13px; right: 13px; top: 13px; font-size: 8px; }
+      .mascot-stage.is-scene #active-mascot { right:3%; width:48%; height:76%; }
+      .mascot-view-switch { margin-bottom:18px; }
+      .mascot-view-button { flex:1; padding:12px 9px; font-size:9px; }
+
       .mascot-controls h3 { font-size: 32px; }
       .mascot-controls p { font-size: 12px; margin-bottom: 21px; }
       .mascot-options { grid-template-columns: repeat(4,minmax(0,1fr)); gap: 7px; }
@@ -1063,12 +1078,18 @@
 </div>
 <div class="mascot-explorer">
 <div class="mascot-stage reveal" id="mascot-stage" style="--mascot-glow:#a6e735">
-<div class="stage-caption"><span>Infinity AI / Mascote</span><strong id="active-color-name">Verde-lima</strong></div>
+<div class="mascot-scene-backdrop" aria-hidden="true"><img alt="" decoding="async" loading="lazy" src="assets/images/brand-exhibition-booth.webp"/></div>
+<div class="mascot-scene-shade" aria-hidden="true"></div>
+<div class="stage-caption"><span id="mascot-view-label">Infinity AI / Mascote</span><strong id="active-color-name">Verde-lima</strong></div>
 <img alt="Mascote camaleão Infinity AI na versão verde-lima" decoding="async" id="active-mascot" loading="lazy" src="assets/images/mascot-01-verde-lima.webp"/>
 </div>
 <div class="mascot-controls reveal from-right">
 <h3>Explore as cores</h3>
-<p>Selecione uma das variações de cor.</p>
+<p>Selecione uma variação e veja o mascote em destaque ou aplicado em um ambiente real da marca.</p>
+<div class="mascot-view-switch" role="group" aria-label="Modo de visualização do mascote">
+<button type="button" class="mascot-view-button is-active" data-mascot-view="character" aria-pressed="true">Mascote</button>
+<button type="button" class="mascot-view-button" data-mascot-view="scene" aria-pressed="false">Aplicado em cenário</button>
+</div>
 <div aria-label="Selecionar variação de cor do mascote" class="mascot-options" id="mascot-options">
 <button aria-pressed="true" class="mascot-option" data-color="#a6e735" data-name="Verde-lima" data-src="mascot-01-verde-lima.webp" style="--swatch:#a6e735" type="button"><span class="swatch"></span><span class="option-name">Verde-lima</span></button>
 <button aria-pressed="false" class="mascot-option" data-color="#65d5a7" data-name="Verde-ciano" data-src="mascot-02-verde-ciano.webp" style="--swatch:#65d5a7" type="button"><span class="swatch"></span><span class="option-name">Verde-ciano</span></button>
@@ -1086,9 +1107,7 @@
 <div aria-hidden="true" class="mascot-palette"><span style="background:#a6e735"></span><span style="background:#65d5a7"></span><span style="background:#36d8ee"></span><span style="background:#188cf4"></span><span style="background:#414ce3"></span><span style="background:#8b59eb"></span><span style="background:#ffdb32"></span><span style="background:#ff9a2f"></span><span style="background:#ff642a"></span><span style="background:#ff5e65"></span><span style="background:#f64aa5"></span><span style="background:#9c60f1"></span></div>
 </div>
 </div>
-<div class="reveal" style="margin-top:clamp(18px,3vw,40px)">
-<button aria-label="Ampliar aplicação do mascote no estande" class="mosaic-card" data-lightbox="assets/images/mascot-live.webp" style="width:100%;height:auto;cursor:zoom-in"><img alt="Mascote Infinity AI aplicado em um ambiente de evento" decoding="async" loading="lazy" src="assets/images/mascot-live.webp" style="width:100%;height:auto;object-fit:contain"/><span class="mosaic-num" style="opacity:1">Mascote em evento ↗</span></button>
-</div>
+
 </div>
 </section>
 <section aria-label="Peça de encerramento Infinity AI" class="closing-section">
@@ -1335,6 +1354,22 @@
           // Force a single restart of the small entrance animation after changing the image.
           void mascot.offsetWidth;
           mascot.style.animation = '';
+        });
+      });
+
+      // Switch between the isolated mascot artwork and a contextual brand-event scene.
+      const mascotViewButtons = document.querySelectorAll('[data-mascot-view]');
+      const mascotViewLabel = document.getElementById('mascot-view-label');
+      mascotViewButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          const sceneMode = button.dataset.mascotView === 'scene';
+          mascotStage.classList.toggle('is-scene', sceneMode);
+          mascotViewButtons.forEach(item => {
+            const active = item === button;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-pressed', String(active));
+          });
+          if (mascotViewLabel) mascotViewLabel.textContent = sceneMode ? 'Infinity AI / Aplicado em cenário' : 'Infinity AI / Mascote';
         });
       });
 
