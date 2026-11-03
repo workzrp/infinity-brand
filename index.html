@@ -484,7 +484,32 @@
     .carousel-arrow:hover { background:rgba(24,195,239,.18);border-color:var(--lime);transform:scale(1.07); }
     .carousel-prev { left:0; }.carousel-next { right:0; }
     .carousel-progress { height:2px; margin:0 4px; background:rgba(255,255,255,.1); overflow:hidden; }
-    .carousel-progress span { display:block;width:0;height:100%;background:linear-gradient(90deg,var(--lime),var(--cyan));box-shadow:0 0 12px var(--cyan);transition:width .18s; }
+    .applications-carousel { position:relative; padding:8px 0 22px; }
+    .mosaic-marquee { display:grid; gap:clamp(9px,1.2vw,16px); overflow:hidden; padding:10px 0 16px; }
+    .mosaic-row { display:flex; width:max-content; gap:clamp(10px,1.35vw,18px); will-change:transform; animation:mosaicDrift 48s linear infinite; }
+    .mosaic-row-reverse { animation-name:mosaicDriftReverse; animation-duration:54s; }
+    .mosaic-row:hover { animation-play-state:paused; }
+    .mosaic-row .mosaic-card { position:relative; display:block; flex:0 0 clamp(150px,17vw,230px); width:clamp(150px,17vw,230px); height:clamp(104px,11.5vw,158px); padding:0; overflow:hidden; border:1px solid rgba(104,211,235,.22); border-radius:4px; background:#082337; cursor:zoom-in; box-shadow:0 10px 28px rgba(0,0,0,.22); transition:border-color .25s,transform .35s cubic-bezier(.22,.75,.2,1),box-shadow .35s; }
+    .mosaic-row .mosaic-card:hover { z-index:2; transform:translateY(-4px) scale(1.035); border-color:var(--lime); box-shadow:0 14px 34px rgba(0,0,0,.34),0 0 20px rgba(24,195,239,.12); }
+    .mosaic-row .mosaic-card img { width:100%; height:100%; object-fit:cover; transition:transform .55s cubic-bezier(.22,.75,.2,1); }
+    .mosaic-row .mosaic-card:hover img { transform:scale(1.07); }
+    .mosaic-row .mosaic-num { left:9px; bottom:8px; padding:4px 6px; background:rgba(2,15,25,.72); color:#eff7fa; font-size:8px; letter-spacing:.12em; opacity:1; transform:none; }
+    .mosaic-hint { margin:4px 0 0; color:#91aab9; font-size:9px; letter-spacing:.16em; text-transform:uppercase; text-align:right; }
+    @keyframes mosaicDrift { from { transform:translate3d(0,0,0); } to { transform:translate3d(-50%,0,0); } }
+    @keyframes mosaicDriftReverse { from { transform:translate3d(-50%,0,0); } to { transform:translate3d(0,0,0); } }
+    @media (max-width:760px) {
+      .applications-carousel { padding:0 0 20px; }
+      .mosaic-marquee { gap:8px; padding:8px 0 12px; }
+      .mosaic-row { gap:8px; animation-duration:58s; }
+      .mosaic-row-reverse { animation-duration:64s; }
+      .mosaic-row .mosaic-card { flex-basis:clamp(112px,32vw,150px); width:clamp(112px,32vw,150px); height:clamp(82px,23vw,112px); }
+      .mosaic-row .mosaic-num { left:6px; bottom:5px; font-size:7px; }
+      .mosaic-hint { font-size:8px; text-align:left; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .mosaic-row { animation:none; }
+      .mosaic-marquee { overflow-x:auto; }
+    }
     .timeline-mascot { position:relative; z-index:5; margin-top:-35px; padding-top:clamp(100px,13vw,180px); background:radial-gradient(ellipse at 76% 45%,rgba(12,95,124,.22),transparent 44%),#041522; }
     .timeline-mascot::before { content:"05"; position:absolute; top:10%; left:clamp(18px,4vw,64px); display:grid;place-items:center;width:46px;height:46px;border:1px solid var(--lime);border-radius:50%;color:var(--lime);background:#041522;box-shadow:0 0 25px rgba(166,231,53,.2);font-size:11px;letter-spacing:.12em; }
     .mascot-stage { isolation:isolate; }
@@ -1041,32 +1066,13 @@
 </div>
 <p>Conectar pessoas, dados e processos.</p>
 </div>
-<div aria-label="Carrossel horizontal de aplicações visuais da Infinity AI" class="applications-carousel reveal">
-<button aria-label="Ver aplicação anterior" class="carousel-arrow carousel-prev" type="button">‹</button>
-<div aria-label="Deslize horizontalmente para ver as aplicações" class="mosaic" id="applications-track" tabindex="0">
-<button aria-label="Ampliar aplicação visual: bandeira Infinity AI" class="mosaic-card" data-lightbox="assets/images/brand-flag.webp"><img alt="Bandeira institucional Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-flag.webp"/><span class="mosaic-num">01</span></button>
-<button aria-label="Ampliar aplicação visual: campanha de dados" class="mosaic-card" data-lightbox="assets/images/brand-data-campaign.webp"><img alt="Peça publicitária com a mensagem Dados em movimento. Decisões mais rápidas." decoding="async" loading="lazy" src="assets/images/brand-data-campaign.webp"/><span class="mosaic-num">02</span></button>
-<button aria-label="Ampliar aplicação visual: papelaria de mesa" class="mosaic-card" data-lightbox="assets/images/brand-desk-stationery.webp"><img alt="Materiais de papelaria Infinity AI sobre uma mesa" decoding="async" loading="lazy" src="assets/images/brand-desk-stationery.webp"/><span class="mosaic-num">03</span></button>
-<button aria-label="Ampliar aplicação visual: conjunto de cartazes" class="mosaic-card" data-lightbox="assets/images/brand-poster-set.webp"><img alt="Composições gráficas e cartazes da identidade Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-poster-set.webp"/><span class="mosaic-num">04</span></button>
-<button aria-label="Ampliar aplicação visual: campanha com pessoas" class="mosaic-card" data-lightbox="assets/images/brand-campaign-people.webp"><img alt="Campanha visual com fotografia de pessoas e grafismos Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-campaign-people.webp"/><span class="mosaic-num">05</span></button>
-<button aria-label="Ampliar aplicação visual: mídia externa urbana" class="mosaic-card" data-lightbox="assets/images/brand-outdoor-01.webp"><img alt="Peça de mídia externa Infinity AI em ambiente urbano" decoding="async" loading="lazy" src="assets/images/brand-outdoor-01.webp"/><span class="mosaic-num">06</span></button>
-<button aria-label="Ampliar aplicação visual: mídia externa" class="mosaic-card" data-lightbox="assets/images/brand-outdoor-02.webp"><img alt="Painel de comunicação Infinity AI em uma rua movimentada" decoding="async" loading="lazy" src="assets/images/brand-outdoor-02.webp"/><span class="mosaic-num">07</span></button>
-<button aria-label="Ampliar aplicação visual: caderno" class="mosaic-card" data-lightbox="assets/images/brand-notebook.webp"><img alt="Caderno institucional Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-notebook.webp"/><span class="mosaic-num">08</span></button>
-<button aria-label="Ampliar aplicação visual: brochura" class="mosaic-card" data-lightbox="assets/images/brand-brochure.webp"><img alt="Brochura aberta com páginas institucionais Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-brochure.webp"/><span class="mosaic-num">09</span></button>
-<button aria-label="Ampliar aplicação visual: detalhe de estande" class="mosaic-card" data-lightbox="assets/images/brand-event-stand-detail.webp"><img alt="Estande e telas com identidade Infinity AI em um evento" decoding="async" loading="lazy" src="assets/images/brand-event-stand-detail.webp"/><span class="mosaic-num">10</span></button>
-<button aria-label="Ampliar aplicação visual: painel de grande formato" class="mosaic-card" data-lightbox="assets/images/brand-billboard.webp"><img alt="Painel publicitário de grande formato Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-billboard.webp"/><span class="mosaic-num">11</span></button>
-<button aria-label="Ampliar aplicação visual: campanha para redes sociais" class="mosaic-card" data-lightbox="assets/images/brand-social-campaign.webp"><img alt="Composições de peças digitais e redes sociais da Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-social-campaign.webp"/><span class="mosaic-num">12</span></button>
-<button aria-label="Ampliar aplicação visual: papelaria escura" class="mosaic-card" data-lightbox="assets/images/brand-stationery-dark.webp"><img alt="Materiais de papelaria com aplicação escura da marca Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-stationery-dark.webp"/><span class="mosaic-num">13</span></button>
-<button aria-label="Ampliar aplicação visual: papelaria clara" class="mosaic-card" data-lightbox="assets/images/brand-stationery-light.webp"><img alt="Materiais de papelaria com aplicação clara da marca Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-stationery-light.webp"/><span class="mosaic-num">14</span></button>
-<button aria-label="Ampliar aplicação visual: detalhe de caderno" class="mosaic-card" data-lightbox="assets/images/brand-notebook-detail.webp"><img alt="Detalhe do caderno e da fita gráfica Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-notebook-detail.webp"/><span class="mosaic-num">15</span></button>
-<button aria-label="Ampliar aplicação visual: conjunto de peças de campanha" class="mosaic-card" data-lightbox="assets/images/brand-campaign-set-01.webp"><img alt="Conjunto de materiais de campanha visual Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-campaign-set-01.webp"/><span class="mosaic-num">16</span></button>
-<button aria-label="Ampliar aplicação visual: composição publicitária" class="mosaic-card" data-lightbox="assets/images/brand-campaign-set-02.webp"><img alt="Variações de layouts e anúncios da identidade Infinity AI" decoding="async" loading="lazy" src="assets/images/brand-campaign-set-02.webp"/><span class="mosaic-num">17</span></button>
-<button aria-label="Ampliar aplicação visual: estande amplo" class="mosaic-card" data-lightbox="assets/images/brand-exhibition-wide.webp"><img alt="Visão ampla de estande Infinity AI em feira" decoding="async" loading="lazy" src="assets/images/brand-exhibition-wide.webp"/><span class="mosaic-num">18</span></button>
-<button aria-label="Ampliar aplicação visual: estande de atendimento" class="mosaic-card" data-lightbox="assets/images/brand-exhibition-booth.webp"><img alt="Estande Infinity AI com atendimento, displays e painel de dashboard" decoding="async" loading="lazy" src="assets/images/brand-exhibition-booth.webp"/><span class="mosaic-num">19</span></button>
+<div aria-label="Aplicações visuais Infinity AI em duas faixas animadas" class="applications-carousel reveal" id="applications-carousel">
+<div class="mosaic-marquee" id="applications-track" aria-label="Selecione uma aplicação para ampliar">
+<div class="mosaic-row mosaic-row-forward" data-row="one"></div>
+<div class="mosaic-row mosaic-row-reverse" data-row="two"></div>
 </div>
-<button aria-label="Ver próxima aplicação" class="carousel-arrow carousel-next" type="button">›</button>
-<div aria-hidden="true" class="carousel-progress"><span></span></div>
-</div>
+<p class="mosaic-hint">Clique em qualquer peça para ampliar</p>
+</div>>
 </div>
 </section>
 <section class="section mascot-section timeline-mascot" id="mascote">
@@ -1194,38 +1200,41 @@
       // Browser back/forward cache can restore a mid-page scroll position; activate any already visible chapters.
       chapters.forEach(chapter => { const r = chapter.getBoundingClientRect(); if (r.top < window.innerHeight * .82 && r.bottom > 0) activateChapter(chapter); });
 
-      // Featured horizontal carousel: the centered application gains focus; adjacent pieces remain previewed.
+      // Two continuous application ribbons. Each row contains a complete sequence plus
+      // an exact duplicate, so the -50% loop never jumps or skips a thumbnail.
+      const carousel = document.getElementById('applications-carousel');
       const appTrack = document.getElementById('applications-track');
-      if (appTrack) {
-        const appCards = Array.from(appTrack.querySelectorAll('.mosaic-card'));
-        const appProgress = document.querySelector('.carousel-progress span');
-        let carouselFrame = false;
-        const scrollStep = direction => {
-          const card = appCards[0];
-          const gap = parseFloat(getComputedStyle(appTrack).gap) || 16;
-          appTrack.scrollBy({ left: direction * ((card?.getBoundingClientRect().width || 320) + gap), behavior: reducedMotion ? 'auto' : 'smooth' });
-        };
-        document.querySelector('.carousel-prev')?.addEventListener('click', () => scrollStep(-1));
-        document.querySelector('.carousel-next')?.addEventListener('click', () => scrollStep(1));
-        const updateCarousel = () => {
-          const trackRect = appTrack.getBoundingClientRect();
-          const center = trackRect.left + trackRect.width / 2;
-          let nearest = 0, nearestDistance = Infinity;
-          appCards.forEach((card, index) => {
-            const rect = card.getBoundingClientRect();
-            const distance = Math.abs((rect.left + rect.width / 2) - center);
-            if (distance < nearestDistance) { nearestDistance = distance; nearest = index; }
+      if (carousel && appTrack) {
+        const sourceCards = Array.from(appTrack.querySelectorAll('.mosaic-card'));
+        const rows = [appTrack.querySelector('[data-row="one"]'), appTrack.querySelector('[data-row="two"]')];
+        const groups = [sourceCards.filter((_, index) => index % 2 === 0), sourceCards.filter((_, index) => index % 2 === 1)];
+        rows.forEach((row, rowIndex) => {
+          const originals = groups[rowIndex];
+          const firstSet = originals.map(card => card.cloneNode(true));
+          const secondSet = originals.map(card => {
+            const clone = card.cloneNode(true);
+            clone.setAttribute('aria-hidden', 'true');
+            clone.setAttribute('tabindex', '-1');
+            clone.querySelectorAll('img').forEach(img => img.setAttribute('alt', ''));
+            return clone;
           });
-          appCards.forEach((card, index) => card.classList.toggle('is-current', index === nearest));
-          const max = appTrack.scrollWidth - appTrack.clientWidth;
-          if (appProgress) appProgress.style.width = `${max > 0 ? (appTrack.scrollLeft / max) * 100 : 100}%`;
-          carouselFrame = false;
-        };
-        appTrack.addEventListener('scroll', () => {
-          if (!carouselFrame) { carouselFrame = true; requestAnimationFrame(updateCarousel); }
-        }, { passive:true });
-        window.addEventListener('resize', updateCarousel, { passive:true });
-        updateCarousel();
+          [...firstSet, ...secondSet].forEach(card => row.appendChild(card));
+          // The row track's exact repeated content guarantees a seamless half-width loop.
+          row.style.animationDuration = Math.max(34, originals.length * 4.1) + 's';
+        });
+        carousel.addEventListener('click', event => {
+          const card = event.target.closest('.mosaic-card[data-lightbox]');
+          if (!card) return;
+          const src = card.getAttribute('data-lightbox');
+          const img = card.querySelector('img');
+          previousFocus = card;
+          lightboxImage.src = src;
+          lightboxImage.alt = img ? img.alt : 'Aplicação visual Infinity AI';
+          lightbox.classList.add('is-open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.style.overflow = 'hidden';
+          lightboxClose.focus();
+        });
       }
 
       // Subtle parallax uses one animation frame and transform only, keeping layout stable.
