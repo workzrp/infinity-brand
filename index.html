@@ -798,7 +798,39 @@
       .stand-showcase > img { transform:none !important; }
     }
 
-  </style>
+  
+    /* Hero mascot image: brighter, richer and more present without washing out the brand palette. */
+    .hero-art img {
+      filter: brightness(1.24) saturate(1.26) contrast(1.06);
+      object-position: 54% 42%;
+      transform: scale(1.055);
+      transition: filter .7s ease, transform 1.2s cubic-bezier(.2,.7,.2,1);
+      will-change: transform, filter;
+    }
+    .hero::after {
+      background:
+        linear-gradient(180deg, rgba(2,14,24,.04) 0%, transparent 18%, transparent 72%, rgba(2,14,24,.22) 100%),
+        radial-gradient(ellipse at 52% 42%, transparent 42%, rgba(2,14,24,.10) 100%);
+    }
+    .hero-art::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: radial-gradient(ellipse at 52% 42%, rgba(68,213,226,.10), transparent 48%);
+      mix-blend-mode: screen;
+    }
+    @media (max-width: 760px) {
+      .hero-art img {
+        filter: brightness(1.18) saturate(1.2) contrast(1.04);
+        object-position: 52% center;
+        transform: scale(1.025);
+      }
+      .hero::after {
+        background: linear-gradient(180deg, rgba(2,14,24,.06), transparent 28%, rgba(2,14,24,.24));
+      }
+    }
+</style>
 </head>
 <body>
 <div aria-hidden="true" class="page-progress"><span id="progress-bar"></span></div>
