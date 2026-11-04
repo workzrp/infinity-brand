@@ -192,13 +192,94 @@ h1 span{white-space:nowrap}
  .hero-bottom p{max-width:35ch!important;font-size:14px!important}
 }
 
+
+/* NOVO CABEÇALHO + HERO — substitui a composição anterior */
+.masthead-v2{
+ position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:80!important;
+ height:112px!important;padding:22px clamp(24px,4vw,64px)!important;
+ display:flex!important;align-items:center!important;justify-content:space-between!important;
+ gap:32px!important;background:transparent!important;border:0!important;backdrop-filter:none!important;
+}
+.masthead-v2.scrolled{background:rgba(4,21,34,.92)!important;backdrop-filter:blur(16px)!important;border-bottom:1px solid rgba(220,242,250,.12)!important}
+.brand-v2{display:block!important;flex:0 0 132px!important;width:132px!important;line-height:0!important}
+.brand-v2 img{display:block!important;width:132px!important;height:auto!important}
+.nav-v2{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:clamp(18px,3vw,46px)!important}
+.nav-v2 a{font:9px "DM Mono",monospace!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#d7e4ea!important;white-space:nowrap!important}
+.nav-v2 a:hover{color:#a6e735!important}
+.nav-v2 .nav-cta-v2{border:1px solid rgba(166,231,53,.65)!important;padding:13px 18px!important;color:#a6e735!important}
+.nav-cta-v2 span{padding-left:6px}
+.menu-v2{display:none!important}
+.hero-v2{
+ position:relative!important;isolation:isolate!important;overflow:hidden!important;
+ min-height:760px!important;height:100svh!important;max-height:1000px!important;
+ display:block!important;background:#03121e!important;
+}
+.hero-art-v2{position:absolute!important;inset:0!important;z-index:-2!important}
+.hero-art-v2 img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;display:block!important}
+.hero-shade-v2{position:absolute!important;inset:0!important;z-index:-1!important;
+ background:linear-gradient(90deg,rgba(2,13,22,.88) 0%,rgba(2,13,22,.65) 43%,rgba(2,13,22,.1) 100%),
+ linear-gradient(0deg,rgba(2,13,22,.88),transparent 54%,rgba(2,13,22,.12))!important}
+.hero-inner-v2{
+ position:relative!important;width:100%!important;height:100%!important;max-width:1600px!important;
+ margin:0 auto!important;padding:clamp(170px,19vh,220px) clamp(28px,4.5vw,72px) 64px!important;
+ display:flex!important;flex-direction:column!important;justify-content:space-between!important;align-items:flex-start!important;
+}
+.hero-inner-v2 h1{
+ display:block!important;margin:0!important;padding:0!important;
+ max-width:1120px!important;font-size:clamp(52px,8.3vw,132px)!important;
+ line-height:.91!important;letter-spacing:-.065em!important;font-weight:600!important;
+ color:#f2f7f8!important;text-wrap:balance!important;
+}
+.hero-inner-v2 h1 span{display:block!important;color:#a6e735!important;margin-top:.08em!important;white-space:nowrap!important}
+.hero-foot-v2{width:100%!important;display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:32px!important;margin:0!important}
+.hero-foot-v2 p{max-width:48ch!important;margin:0!important;color:#f0f6f8!important;font-size:clamp(14px,1.35vw,18px)!important;line-height:1.7!important;text-shadow:0 2px 14px rgba(0,0,0,.35)!important}
+.scroll-v2{display:flex!important;align-items:center!important;gap:14px!important;white-space:nowrap!important;font:10px "DM Mono",monospace!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#e0ebef!important}
+.scroll-v2 i{width:48px!important;height:48px!important;display:grid!important;place-items:center!important;border:1px solid rgba(220,242,250,.25)!important;border-radius:50%!important;color:#a6e735!important;font-style:normal!important;font-size:18px!important}
+@media(max-width:760px){
+ .masthead-v2{height:88px!important;padding:16px 22px!important}
+ .brand-v2,.brand-v2 img{width:104px!important;flex-basis:104px!important}
+ .menu-v2{display:grid!important;place-items:center!important;width:42px!important;height:42px!important;border:1px solid rgba(220,242,250,.24)!important;border-radius:50%!important;background:rgba(4,21,34,.45)!important;color:white!important}
+ .nav-v2{display:none!important;position:absolute!important;top:88px!important;left:0!important;right:0!important;padding:24px!important;background:rgba(4,21,34,.97)!important;border-bottom:1px solid rgba(220,242,250,.12)!important;flex-direction:column!important;align-items:stretch!important;gap:22px!important}
+ .nav-v2.open{display:flex!important}
+ .nav-v2 a{font-size:11px!important}
+ .hero-v2{height:92svh!important;min-height:700px!important;max-height:900px!important}
+ .hero-art-v2 img{object-position:60% center!important}
+ .hero-inner-v2{padding:142px 22px 48px!important}
+ .hero-inner-v2 h1{font-size:clamp(42px,9.5vw,68px)!important;line-height:.98!important;letter-spacing:-.06em!important}
+ .hero-inner-v2 h1 span{white-space:normal!important}
+ .hero-foot-v2{align-items:flex-start!important;flex-direction:column!important;gap:22px!important}
+ .hero-foot-v2 p{max-width:38ch!important;font-size:14px!important}
+ .scroll-v2{display:none!important}
+}
+@media(max-width:380px){.hero-inner-v2 h1{font-size:39px!important}}
+
 </style>
 </head>
 <body>
 <div class="topline" id="topline"></div>
-<header id="header"><a class="logo" href="#inicio" aria-label="Infinity AI — início"><img src="assets/images/infinity-logo.svg" alt="Infinity AI"></a><button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button><nav class="nav" id="nav"><a href="#essencia">Essência</a><a href="#sistema">Sistema visual</a><a href="#aplicacoes">Aplicações</a><a href="#mascote">Mascote</a><a class="nav-cta" href="#fim">Infinity AI ↗</a></nav></header>
+<header id="header" class="masthead-v2">
+  <a class="brand-v2" href="#inicio" aria-label="Infinity AI — início"><img src="assets/images/infinity-logo.svg" alt="Infinity AI"></a>
+  <button class="menu-v2" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+  <nav class="nav-v2" id="nav" aria-label="Navegação principal">
+    <a href="#essencia">Essência</a>
+    <a href="#sistema">Sistema visual</a>
+    <a href="#aplicacoes">Aplicações</a>
+    <a href="#mascote">Mascote</a>
+    <a class="nav-cta-v2" href="#fim">Infinity AI <span>↗</span></a>
+  </nav>
+</header>
 <main id="inicio">
-<section class="hero"><div class="hero-bg"><img src="assets/images/hero-cover.svg" alt="" fetchpriority="high"></div><div class="hero-content"><h1>INTELIGÊNCIA<span>EM MOVIMENTO.</span></h1><div class="hero-bottom"><p>Uma identidade criada para traduzir o encontro entre pessoas, tecnologia e resultados — em uma marca que está sempre em evolução.</p><a class="scroll-link" href="#essencia"><i>↓</i> Explore a identidade</a></div></div></section>
+<section class="hero-v2" id="inicio-hero" aria-label="Infinity AI — Inteligência em movimento">
+  <div class="hero-art-v2"><img src="assets/images/hero-cover.svg" alt="" fetchpriority="high"></div>
+  <div class="hero-shade-v2"></div>
+  <div class="hero-inner-v2">
+    <h1>INTELIGÊNCIA<span>EM MOVIMENTO.</span></h1>
+    <div class="hero-foot-v2">
+      <p>Uma identidade criada para traduzir o encontro entre pessoas, tecnologia e resultados — em uma marca que está sempre em evolução.</p>
+      <a href="#essencia" class="scroll-v2"><i>↓</i><span>Explore a identidade</span></a>
+    </div>
+  </div>
+</section>
 <div class="ticker"><div class="ticker-track"><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span></div></div>
 <section class="manifesto" id="essencia"><div class="wrap manifesto-grid"><div class="reveal"><div class="eyebrow">01 / A essência</div><h2>O FUTURO NÃO É UM DESTINO.<br><em>É MOVIMENTO.</em></h2></div><div class="manifesto-copy reveal"><p>A Infinity AI nasce da conexão entre <strong>pessoas, tecnologia e resultados</strong>. Uma marca que traduz inteligência em possibilidades e transforma complexidade em experiências mais simples.</p><p>Seu universo visual parte do símbolo do infinito: continuidade, conexão e evolução sem limites.</p><img class="manifesto-mark" src="assets/images/infinity-ribbon.webp" alt="Elemento gráfico inspirado no símbolo do infinito" loading="lazy"></div></div></section>
 <section class="statement"><div class="statement-art"><img src="assets/images/infinity-glass.webp" alt="" loading="lazy"></div><div class="wrap statement-content reveal"><div class="eyebrow">02 / O conceito</div><h2>UMA IDEIA.<br><span>INFINITAS</span><br>POSSIBILIDADES.</h2><p>As curvas contínuas do símbolo inspiram uma linguagem visual fluida, dinâmica e reconhecível. Um sistema que conecta cada ponto da experiência.</p></div></section>
