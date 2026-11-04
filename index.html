@@ -269,6 +269,29 @@
     .lightbox-close { position: absolute; top: 22px; right: 22px; display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid rgba(255,255,255,.25); border-radius: 50%; background: rgba(255,255,255,.05); color: white; font-size: 22px; cursor: pointer; }
     .lightbox-close:hover { border-color: var(--lime); color: var(--lime); }
 
+    .motion-toggle {
+      position:fixed; z-index:95; left:clamp(16px,2.5vw,34px); bottom:24px;
+      display:inline-flex; align-items:center; gap:9px; min-height:42px; padding:0 15px;
+      border:1px solid rgba(179,218,236,.24); border-radius:999px;
+      color:#dcebf1; background:rgba(3,17,28,.78); backdrop-filter:blur(14px);
+      font-size:9px; letter-spacing:.12em; text-transform:uppercase; cursor:pointer;
+      box-shadow:0 8px 28px rgba(0,0,0,.18); transition:border-color .25s,background .25s,color .25s,transform .25s;
+    }
+    .motion-toggle:hover,.motion-toggle:focus-visible { color:#fff; border-color:var(--lime); background:rgba(5,29,43,.94); transform:translateY(-2px); outline:none; }
+    .motion-toggle .motion-icon { display:grid; place-items:center; width:17px; height:17px; color:var(--lime); font-size:14px; line-height:1; }
+    .motion-paused *, .motion-paused *::before, .motion-paused *::after {
+      animation-play-state:paused !important;
+      scroll-behavior:auto !important;
+    }
+    .main-nav a[aria-current="location"] { color:#fff; }
+    .main-nav a[aria-current="location"]::after { transform:scaleX(1); transform-origin:left; }
+    @media(max-width:760px) {
+      .motion-toggle { left:14px; bottom:15px; min-height:38px; padding:0 12px; font-size:8px; }
+    }
+    @media(prefers-reduced-motion:reduce) {
+      .motion-toggle { display:none; }
+    }
+
     .reveal { opacity: 0; transform: translate3d(0,28px,0); transition: opacity .8s var(--ease), transform .9s var(--ease); transition-delay: var(--delay, 0ms); }
     .reveal.from-left { transform: translate3d(-28px,0,0); }
     .reveal.from-right { transform: translate3d(28px,0,0); }
@@ -841,6 +864,10 @@
 <a href="#mascote">Mascote</a>
 </nav>
 </header>
+<button aria-label="Pausar animações" aria-pressed="false" class="motion-toggle" id="motion-toggle" type="button">
+  <span aria-hidden="true" class="motion-icon" id="motion-icon">Ⅱ</span>
+  <span id="motion-label">Pausar animações</span>
+</button>
 <main>
 <section aria-label="Infinity AI — Pessoas, tecnologia e resultados em sintonia" class="hero" id="inicio">
 <picture class="hero-art">
@@ -1138,6 +1165,41 @@
         }
       }, { passive: true });
       updateScroll();
+
+      // Give visitors control over ambient motion without disabling useful interactions.
+      const motionToggle = document.getElementById('motion-toggle');
+      const motionLabel = document.getElementById('motion-label');
+      const motionIcon = document.getElementById('motion-icon');
+      if (motionToggle) {
+        motionToggle.addEventListener('click', () => {
+          const paused = document.body.classList.toggle('motion-paused');
+          motionToggle.setAttribute('aria-pressed', String(paused));
+          motionToggle.setAttribute('aria-label', paused ? 'Retomar animações' : 'Pausar animações');
+          motionLabel.textContent = paused ? 'Retomar animações' : 'Pausar animações';
+          motionIcon.textContent = paused ? '▶' : 'Ⅱ';
+        });
+      }
+
+      // Keep the compact navigation in sync with the chapter currently on screen.
+      const sectionLinks = Array.from(nav.querySelectorAll('a[href^="#"]'));
+      const observedSections = sectionLinks
+        .map(link => document.querySelector(link.getAttribute('href')))
+        .filter(Boolean);
+      if ('IntersectionObserver' in window && observedSections.length) {
+        const sectionObserver = new IntersectionObserver(entries => {
+          entries.forEach(entry => {
+            if (!entry.isIntersecting) return;
+            sectionLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + entry.target.id) {
+                link.setAttribute('aria-current', 'location');
+              } else {
+                link.removeAttribute('aria-current');
+              }
+            });
+          });
+        }, { rootMargin: '-38% 0px -48% 0px', threshold: 0 });
+        observedSections.forEach(section => sectionObserver.observe(section));
+      }
 
       menuToggle.addEventListener('click', () => {
         const open = menuToggle.getAttribute('aria-expanded') !== 'true';
