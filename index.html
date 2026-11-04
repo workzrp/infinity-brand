@@ -41,6 +41,66 @@ footer{display:flex;align-items:center;justify-content:space-between;gap:20px;pa
 }
 @media(max-width:370px){.hero h1{font-size:40px}.manifesto h2,.app-head h2,.mascot-copy h2{font-size:43px}.gallery{grid-template-rows:220px 150px 150px}}
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
+
+/* Ajuste de ritmo, escala de imagens e galeria — revisão visual */
+.manifesto,.system,.applications,.mascot{padding-top:clamp(72px,8vw,118px)!important;padding-bottom:clamp(72px,8vw,118px)!important}
+.manifesto-grid{gap:clamp(34px,5vw,76px)!important;align-items:center!important}
+.manifesto h2{font-size:clamp(48px,6.8vw,96px)!important}
+.manifesto-mark{width:min(260px,58%)!important;margin-top:22px!important}
+.statement{min-height:0!important;grid-template-columns:1.05fr .95fr!important}
+.statement-art{min-height:600px!important;display:grid!important;place-items:center!important;background:#0b293b!important;padding:clamp(14px,2vw,30px)!important}
+.statement-art img{width:100%!important;height:100%!important;max-height:680px!important;object-fit:contain!important}
+.statement-content{padding:clamp(48px,6vw,84px)!important}
+.system-head,.app-head{margin-bottom:34px!important}
+.system-image{height:auto!important;aspect-ratio:16/8.5!important;max-height:650px!important;background:#0b293b!important}
+.system-image img{object-fit:contain!important;object-position:center!important}
+.gallery{
+ display:grid!important;
+ grid-template-columns:repeat(4,minmax(0,1fr))!important;
+ grid-template-rows:repeat(3,minmax(175px,15vw))!important;
+ grid-auto-flow:row!important;
+ gap:12px!important;
+}
+.gallery figure{grid-column:auto!important;grid-row:auto!important;min-width:0!important;min-height:0!important;background:#102f40!important;display:grid!important;place-items:center!important}
+.gallery .wide{grid-column:span 2!important;grid-row:span 3!important}
+.gallery figure img{width:100%!important;height:100%!important;min-height:0!important;object-fit:contain!important;object-position:center!important;transition:transform .55s ease!important}
+.gallery .wide img{min-height:0!important;object-fit:contain!important}
+.gallery figcaption{font-size:10px!important;padding:48px 16px 15px!important;background:linear-gradient(0deg,rgba(3,16,25,.94),rgba(3,16,25,.35) 55%,transparent)!important}
+.mascot-grid{gap:clamp(32px,5vw,76px)!important}
+.mascot-visual{min-height:clamp(390px,42vw,590px)!important}
+.mascot-visual img{width:min(100%,590px)!important;max-height:600px!important}
+.closing{min-height:0!important;align-items:stretch!important}
+.closing img{min-height:500px!important;object-fit:cover!important;object-position:center!important}
+.closing-content{padding:clamp(42px,6vw,84px)!important}
+@media(max-width:900px){
+ .gallery{grid-template-rows:repeat(3,minmax(165px,22vw))!important}
+ .gallery .wide{grid-column:span 2!important;grid-row:span 3!important}
+ .gallery figure:nth-child(n){display:grid!important;grid-column:auto!important;grid-row:auto!important}
+ .gallery .wide{grid-column:span 2!important;grid-row:span 3!important}
+}
+@media(max-width:700px){
+ .manifesto,.system,.applications,.mascot{padding-top:70px!important;padding-bottom:70px!important}
+ .manifesto-grid{gap:26px!important}
+ .manifesto-mark{width:180px!important}
+ .statement{display:flex!important;flex-direction:column!important}
+ .statement-art{min-height:0!important;height:auto!important;aspect-ratio:1.18/1!important;padding:12px!important}
+ .statement-art img{width:100%!important;height:100%!important;object-fit:contain!important}
+ .statement-content{padding:48px 22px 58px!important}
+ .system-image{aspect-ratio:4/3!important;height:auto!important}
+ .system-image img{object-fit:contain!important}
+ .gallery{grid-template-columns:repeat(2,minmax(0,1fr))!important;grid-template-rows:auto!important;grid-auto-rows:minmax(160px,48vw)!important;gap:8px!important}
+ .gallery .wide{grid-column:span 2!important;grid-row:auto!important}
+ .gallery figure:nth-child(n){display:grid!important;grid-column:auto!important;grid-row:auto!important}
+ .gallery .wide img{aspect-ratio:1.5/1!important}
+ .gallery figure img{aspect-ratio:1/1!important}
+ .gallery figcaption{font-size:8px!important;padding:38px 10px 10px!important}
+ .mascot-grid{gap:18px!important}
+ .mascot-visual{min-height:300px!important}
+ .mascot-visual img{width:min(100%,410px)!important;max-height:420px!important}
+ .closing img{min-height:0!important;aspect-ratio:1.2/1!important}
+ .closing-content{padding:48px 22px 58px!important}
+}
+
 </style>
 </head>
 <body>
