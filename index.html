@@ -1,299 +1,119 @@
 <!doctype html>
 <html lang="pt-BR">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-<meta name="theme-color" content="#041522">
-<meta name="description" content="Infinity AI — identidade visual. Pessoas, tecnologia e resultados em sintonia.">
-<title>Infinity AI — Identidade em movimento</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#061724">
+<meta name="description" content="Infinity AI — pessoas, tecnologia e resultados em movimento.">
+<title>Infinity AI — Inteligência em movimento</title>
 <link rel="icon" href="assets/images/infinity-logo.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#041522;--bg2:#071d2d;--ink:#eff7fa;--muted:#9bb2c0;--lime:#a6e735;--cyan:#5dc3e0;--line:rgba(220,242,250,.14);--max:1440px;--pad:clamp(22px,6vw,92px);--ease:cubic-bezier(.2,.75,.2,1)}
-*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;background:var(--bg);color:var(--ink);font-family:Manrope,Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}body::selection{background:var(--lime);color:var(--bg)}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button{font:inherit}.wrap{width:min(var(--max),calc(100% - var(--pad)*2));margin:auto}.mono,.eyebrow,.nav a,.index,.caption,.footer-meta{font-family:"DM Mono",monospace;text-transform:uppercase;letter-spacing:.13em}.eyebrow{font-size:10px;color:var(--lime);display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:28px;height:1px;background:currentColor}.topline{height:2px;position:fixed;inset:0 0 auto;z-index:100;background:linear-gradient(90deg,var(--lime),var(--cyan));transform-origin:left;transform:scaleX(var(--progress,0))}
-header{position:fixed;z-index:50;top:0;left:0;right:0;padding:25px var(--pad);display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid transparent;transition:.4s var(--ease)}header.scrolled{padding-top:14px;padding-bottom:14px;background:rgba(4,21,34,.86);backdrop-filter:blur(18px);border-color:var(--line)}.logo{width:112px}.logo img{width:100%;height:auto}.nav{display:flex;gap:clamp(18px,3vw,42px);align-items:center}.nav a{font-size:9px;color:#c2d2da;transition:color .2s}.nav a:hover{color:var(--lime)}.nav-cta{border:1px solid rgba(166,231,53,.55);padding:12px 17px;color:var(--lime)!important}.menu{display:none;background:none;border:1px solid var(--line);color:white;border-radius:50%;width:42px;height:42px}
-.hero{height:min(980px,100svh);min-height:680px;position:relative;display:flex;align-items:flex-end;isolation:isolate;overflow:hidden;background:#03121e}.hero-bg{position:absolute;inset:0;z-index:-2}.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.84}.hero:after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,rgba(2,15,25,.75),rgba(2,15,25,.08) 80%),linear-gradient(0deg,rgba(2,15,25,.8),transparent 58%)}.hero-content{padding:0 var(--pad) clamp(70px,10vh,120px);width:100%;max-width:1500px;margin:auto}.hero-kicker{display:flex;gap:14px;align-items:center;margin-bottom:28px}.hero-kicker .mono{font-size:10px;color:#d4e3e9}.live-dot{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 15px var(--lime)}h1{font-size:clamp(68px,12.4vw,184px);line-height:.78;letter-spacing:-.095em;font-weight:600;margin:0;max-width:1150px}h1 span{display:block;color:var(--lime)}.hero-bottom{display:flex;align-items:flex-end;justify-content:space-between;gap:30px;margin-top:45px}.hero-bottom p{font-size:clamp(14px,1.5vw,18px);line-height:1.65;color:#d3e0e6;max-width:420px;margin:0}.scroll-link{display:flex;align-items:center;gap:14px;font:10px "DM Mono",monospace;letter-spacing:.15em;text-transform:uppercase;color:#c3d5de}.scroll-link i{width:46px;height:46px;border:1px solid var(--line);border-radius:50%;display:grid;place-items:center;font-style:normal;color:var(--lime);font-size:18px}
-.ticker{overflow:hidden;border-block:1px solid var(--line);padding:20px 0;background:#061b29}.ticker-track{display:flex;width:max-content;animation:marquee 32s linear infinite}.ticker span{font-size:clamp(12px,1.35vw,17px);font-weight:600;letter-spacing:.1em;text-transform:uppercase;white-space:nowrap;padding:0 26px;color:#c4d5dd}.ticker b{color:var(--lime);font-weight:500}@keyframes marquee{to{transform:translateX(-50%)}}
-section{position:relative}.manifesto{padding:clamp(110px,16vw,220px) 0;background:radial-gradient(ellipse at 70% 50%,rgba(24,119,146,.17),transparent 42%),var(--bg)}.manifesto-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:8vw;align-items:end}.manifesto h2{font-size:clamp(48px,8vw,116px);line-height:.92;letter-spacing:-.075em;font-weight:500;margin:28px 0 0}.manifesto h2 em{font-style:normal;color:var(--lime)}.manifesto-copy{padding-bottom:8px}.manifesto-copy p{font-size:clamp(16px,1.7vw,22px);line-height:1.75;color:#c0d1da;margin:0 0 24px}.manifesto-copy strong{color:white;font-weight:600}.manifesto-mark{margin-top:55px;width:min(240px,55%);opacity:.95}
-.statement{min-height:670px;display:flex;align-items:center;overflow:hidden;background:#061b2a}.statement-art{position:absolute;inset:0}.statement-art img{width:100%;height:100%;object-fit:cover;object-position:center;opacity:.8}.statement:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,28,.94),rgba(3,17,28,.5) 54%,rgba(3,17,28,.05)),linear-gradient(0deg,rgba(3,17,28,.4),transparent)}.statement-content{position:relative;z-index:1;padding:110px 0}.statement h2{font-size:clamp(56px,10vw,148px);line-height:.82;letter-spacing:-.085em;font-weight:600;margin:28px 0;max-width:1000px}.statement h2 span{color:transparent;-webkit-text-stroke:1px rgba(239,247,250,.85)}.statement p{font-size:16px;line-height:1.8;color:#d1dfe5;max-width:420px}
-.system{padding:clamp(100px,14vw,180px) 0;background:#eff5f5;color:#061b29}.system .eyebrow{color:#43849a}.system-head{display:flex;justify-content:space-between;gap:50px;align-items:end;margin-bottom:65px}.system h2{font-size:clamp(52px,8.5vw,122px);letter-spacing:-.085em;line-height:.85;font-weight:600;margin:25px 0 0}.system-head p{max-width:310px;color:#506571;line-height:1.75;font-size:14px;margin:0 0 5px}.system-image{position:relative;overflow:hidden;background:#061b29;min-height:430px}.system-image img{width:100%;height:100%;min-height:430px;object-fit:cover}.system-image:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(3,17,28,.12),transparent 55%)}.palette{display:grid;grid-template-columns:repeat(5,1fr);margin-top:22px;gap:10px}.swatch{height:112px;padding:12px;display:flex;align-items:flex-end;justify-content:space-between;color:white;font:10px "DM Mono",monospace}.swatch:nth-child(1){background:#041522}.swatch:nth-child(2){background:#071d2d}.swatch:nth-child(3){background:#0a263a}.swatch:nth-child(4){background:#a6e735;color:#041522}.swatch:nth-child(5){background:#5dc3e0;color:#041522}
-.applications{padding:clamp(100px,14vw,180px) 0;background:var(--bg)}.app-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:60px}.app-head h2{font-size:clamp(52px,8.8vw,128px);line-height:.84;letter-spacing:-.085em;font-weight:600;margin:22px 0 0}.app-head p{max-width:290px;color:var(--muted);font-size:14px;line-height:1.75;margin:0}.gallery{display:grid;grid-template-columns:1.15fr .85fr;gap:14px}.gallery figure{margin:0;position:relative;overflow:hidden;background:#071d2d}.gallery figure img{width:100%;height:100%;min-height:280px;object-fit:cover;transition:transform .8s var(--ease)}.gallery figure:hover img{transform:scale(1.035)}.gallery .wide{grid-row:span 2}.gallery .wide img{min-height:610px}.gallery figcaption{position:absolute;bottom:0;left:0;right:0;padding:35px 22px 18px;background:linear-gradient(transparent,rgba(2,13,21,.7));font:10px "DM Mono",monospace;letter-spacing:.12em;text-transform:uppercase}
-.mascot{padding:clamp(90px,12vw,150px) 0;background:#071d2d;overflow:hidden}.mascot-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:7vw}.mascot-visual{position:relative;min-height:500px;display:grid;place-items:center;background:radial-gradient(ellipse,rgba(166,231,53,.14),transparent 62%)}.mascot-visual:before{content:"";position:absolute;width:min(440px,90%);aspect-ratio:1;border:1px solid rgba(166,231,53,.22);border-radius:50%;box-shadow:0 0 90px rgba(93,195,224,.08),inset 0 0 80px rgba(93,195,224,.05)}.mascot-visual img{position:relative;z-index:1;width:min(82%,480px);max-height:520px;object-fit:contain;filter:drop-shadow(0 25px 40px rgba(0,0,0,.25));transition:opacity .25s}.mascot-copy h2{font-size:clamp(48px,7vw,98px);letter-spacing:-.08em;line-height:.88;margin:25px 0;font-weight:600}.mascot-copy h2 span{color:var(--lime)}.mascot-copy p{max-width:410px;color:#bdced7;font-size:15px;line-height:1.8}.colors{display:flex;flex-wrap:wrap;gap:10px;margin-top:35px}.color-btn{width:27px;height:27px;border-radius:50%;border:1px solid rgba(255,255,255,.35);background:var(--c);cursor:pointer;position:relative}.color-btn[aria-pressed=true]:after{content:"";position:absolute;inset:-5px;border:1px solid var(--c);border-radius:50%}
-.closing{min-height:560px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#03121e}.closing img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.76}.closing:after{content:"";position:absolute;inset:0;background:rgba(2,14,24,.35)}.closing-content{position:relative;z-index:1;padding:90px 24px}.closing h2{font-size:clamp(48px,9vw,130px);line-height:.86;letter-spacing:-.09em;margin:25px auto;max-width:1050px}.closing h2 span{color:var(--lime)}.closing p{font-size:13px;color:#d2e1e7;letter-spacing:.04em}
-footer{padding:30px var(--pad);display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line);background:#03121e}.footer-logo{width:94px}.footer-logo img{width:100%}.footer-meta{font-size:9px;color:#8299a6}.backtop{font:10px "DM Mono",monospace;color:var(--lime);text-transform:uppercase;letter-spacing:.12em}
-.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}.reveal.visible{opacity:1;transform:none}
-@media(max-width:760px){header{padding:17px 22px}.logo{width:96px}.menu{display:grid;place-items:center}.nav{display:none;position:absolute;top:100%;left:0;right:0;padding:24px;background:rgba(4,21,34,.97);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:22px}.nav.open{display:flex}.nav a{font-size:11px}.hero{min-height:680px;height:92svh}.hero-bg img{object-position:57% center}.hero-content{padding:0 22px 58px}.hero-bottom{align-items:flex-start;flex-direction:column;margin-top:30px}.scroll-link{display:none}.manifesto-grid,.mascot-grid{grid-template-columns:1fr;gap:42px}.manifesto-copy{max-width:540px}.manifesto-mark{margin-top:30px}.statement{min-height:590px}.statement-content{padding:90px 0}.system-head,.app-head{display:block}.system-head p,.app-head p{margin-top:28px}.palette{grid-template-columns:repeat(2,1fr)}.swatch{height:90px}.gallery{grid-template-columns:1fr 1fr;gap:8px}.gallery .wide{grid-column:span 2;grid-row:auto}.gallery .wide img{min-height:300px}.gallery figure img{min-height:190px}.mascot-visual{min-height:360px;order:2}.mascot-copy{order:1}.closing{min-height:430px}footer{padding:25px 22px}.footer-meta{display:none}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
-
-/* Refinamento de legibilidade e composição */
-.hero-kicker{display:none}
-.hero-content{padding-top:clamp(120px,16vh,180px)}
-
-:root{--pad:clamp(22px,5.4vw,84px)}
-html{scroll-padding-top:88px}
-body{line-height:1.55}
-h1,.manifesto h2,.statement h2,.system h2,.app-head h2,.mascot-copy h2,.closing h2{letter-spacing:-.055em;text-wrap:balance}
-.hero{min-height:700px}
-.hero-bg img{object-position:center 44%;opacity:.66}
-.hero:after{background:linear-gradient(90deg,rgba(2,13,22,.88) 0%,rgba(2,13,22,.58) 52%,rgba(2,13,22,.12) 100%),linear-gradient(0deg,rgba(2,13,22,.92) 0%,rgba(2,13,22,.16) 66%,rgba(2,13,22,.24) 100%)}
-.hero-content{padding-bottom:clamp(64px,9vh,108px)}
-.hero-kicker{margin-bottom:24px}
-h1{font-size:clamp(48px,8.2vw,128px);line-height:.9;max-width:1050px}
-h1 span{margin-top:.08em}
-.hero-bottom{margin-top:34px;align-items:center}
-.hero-bottom p{max-width:48ch;color:#f0f6f8;text-shadow:0 1px 12px rgba(0,0,0,.35)}
-.hero-kicker .mono{color:#f0f6f8}
-.manifesto{padding:clamp(90px,12vw,164px) 0}
-.manifesto-grid{grid-template-columns:minmax(0,1.08fr) minmax(300px,.92fr);gap:clamp(48px,7vw,108px);align-items:center}
-.manifesto h2{font-size:clamp(48px,6.6vw,94px);line-height:.98}
-.manifesto-copy{max-width:58ch;padding:0}
-.manifesto-copy p{font-size:clamp(15px,1.35vw,18px);line-height:1.8;color:#d0dce2}
-.manifesto-mark{width:min(210px,48%);margin-top:32px}
-.statement{min-height:0;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;background:#061b2a}
-.statement-art{position:relative;inset:auto;min-height:610px;grid-column:1;grid-row:1}
-.statement-art img{position:absolute;inset:0;object-fit:cover;opacity:1}
-.statement:after{display:none}
-.statement-content{grid-column:2;grid-row:1;align-self:center;width:100%;padding:clamp(72px,9vw,128px) clamp(28px,6vw,88px);margin:0}
-.statement h2{font-size:clamp(48px,6.2vw,88px);line-height:.94;letter-spacing:-.055em;margin:26px 0}
-.statement h2 span{color:var(--lime);-webkit-text-stroke:0}
-.statement p{font-size:15px;line-height:1.8;color:#d7e3e9;max-width:42ch}
-.system{padding:clamp(88px,11vw,150px) 0}
-.system-head{gap:clamp(32px,6vw,90px);margin-bottom:44px}
-.system h2{font-size:clamp(48px,6.5vw,92px);line-height:.94}
-.system-head p{max-width:42ch;color:#3f5662;font-size:15px}
-.system-image{min-height:clamp(260px,37vw,510px);max-height:560px}
-.system-image img{min-height:clamp(260px,37vw,510px);object-position:center 48%}
-.palette{gap:8px;margin-top:14px}
-.swatch{height:96px;padding:12px;gap:8px;flex-direction:column;align-items:flex-start;justify-content:space-between}
-.swatch span:last-child{font-size:10px}
-.applications{padding:clamp(88px,11vw,150px) 0}
-.app-head{align-items:end;margin-bottom:42px;gap:40px}
-.app-head h2{font-size:clamp(48px,6.7vw,96px);line-height:.94}
-.app-head p{max-width:40ch;font-size:15px;color:#bdcdd5}
-.gallery{grid-template-columns:1.1fr .9fr;grid-auto-rows:minmax(230px,24vw);gap:12px}
-.gallery figure{min-height:0;isolation:isolate}
-.gallery figure img{height:100%;min-height:0;object-fit:cover}
-.gallery .wide{grid-row:span 2}
-.gallery .wide img{min-height:0}
-.gallery figcaption{z-index:1;padding:52px 22px 18px;background:linear-gradient(0deg,rgba(2,13,21,.94) 0%,rgba(2,13,21,.62) 48%,transparent 100%);color:#fff;font-size:10px;line-height:1.5;text-shadow:0 1px 8px rgba(0,0,0,.5)}
-.mascot{padding:clamp(84px,11vw,148px) 0}
-.mascot-grid{grid-template-columns:minmax(0,1fr) minmax(0,.95fr);gap:clamp(40px,7vw,100px)}
-.mascot-visual{min-height:clamp(360px,42vw,560px);background:transparent}
-.mascot-visual:before{width:min(390px,82%);box-shadow:0 18px 60px rgba(0,0,0,.16),inset 0 0 55px rgba(93,195,224,.04)}
-.mascot-visual img{width:min(88%,500px);max-height:540px}
-.mascot-copy h2{font-size:clamp(46px,6vw,84px);line-height:.96;letter-spacing:-.055em;margin:24px 0}
-.mascot-copy p{max-width:46ch;font-size:15px;line-height:1.8;color:#d0dce3}
-.color-btn{width:30px;height:30px;flex:0 0 auto}
-.closing{min-height:0;display:grid;grid-template-columns:1fr 1fr;text-align:left;background:#03121e}
-.closing img{position:relative;inset:auto;width:100%;height:100%;min-height:430px;object-fit:cover;opacity:1}
-.closing:after{display:none}
-.closing-content{align-self:center;padding:clamp(58px,8vw,112px) clamp(28px,6vw,84px)}
-.closing-content .eyebrow{justify-content:flex-start!important}
-.closing h2{font-size:clamp(44px,5.5vw,78px);line-height:.98;letter-spacing:-.055em;margin:24px 0;text-align:left}
-.closing h2 span{color:var(--lime)}
-.closing p{font-size:14px;color:#d2e1e7}
-footer{padding-top:25px;padding-bottom:25px}
+:root{--night:#061724;--deep:#0a2638;--blue:#10384b;--lime:#a6e735;--cyan:#5dc3e0;--paper:#edf3f1;--white:#f5f8f7;--ink:#102b38;--muted:#9eb2bb;--line:rgba(223,241,244,.16);--pad:clamp(22px,6vw,96px);--max:1500px;--mono:"DM Mono",monospace;--sans:Manrope,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--night);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}img{display:block;max-width:100%}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:var(--lime);color:var(--night)}.wrap{width:min(var(--max),calc(100% - var(--pad)*2));margin-inline:auto}.eyebrow{display:flex;align-items:center;gap:12px;font:10px var(--mono);letter-spacing:.16em;text-transform:uppercase;color:var(--lime)}.eyebrow:before{content:"";width:24px;height:1px;background:currentColor}.topline{position:fixed;z-index:120;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--lime),var(--cyan));transform:scaleX(var(--progress,0));transform-origin:left}
+header{position:absolute;z-index:100;top:0;left:0;right:0;height:112px;padding:24px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:40px;transition:background .3s,border-color .3s}header.scrolled{position:fixed;background:rgba(6,23,36,.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.logo{width:126px;flex:0 0 126px;line-height:0}.logo img{width:100%;height:auto}.nav{display:flex;align-items:center;gap:clamp(20px,3vw,44px)}.nav a{font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#d3e0e4;transition:color .2s}.nav a:hover{color:var(--lime)}.nav .nav-cta{padding:13px 17px;border:1px solid rgba(166,231,53,.55);color:var(--lime)}.menu{display:none}
+.hero{min-height:min(900px,100svh);height:850px;max-height:1000px;position:relative;isolation:isolate;overflow:hidden;background:var(--night);display:flex;align-items:stretch}.hero-bg{position:absolute;z-index:-2;inset:0 0 0 24%;overflow:hidden}.hero-bg img{width:100%;height:100%;object-fit:cover;object-position:68% center;opacity:.8}.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#061724 0%,rgba(6,23,36,.98) 25%,rgba(6,23,36,.68) 55%,rgba(6,23,36,.12) 100%),linear-gradient(0deg,rgba(6,23,36,.72),transparent 45%)}.hero-inner{width:min(var(--max),calc(100% - var(--pad)*2));margin:auto;padding:165px 0 76px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start}.hero h1{font-size:clamp(64px,9.2vw,144px);line-height:.88;letter-spacing:-.075em;font-weight:600;margin:0;max-width:1150px;text-wrap:balance}.hero h1 span{display:block;color:var(--lime);white-space:nowrap;margin-top:.07em}.hero-bottom{width:100%;display:flex;justify-content:space-between;align-items:flex-end;gap:36px}.hero-bottom p{max-width:46ch;margin:0;color:#d9e5e8;font-size:clamp(15px,1.35vw,18px);line-height:1.75}.scroll-link{display:flex;align-items:center;gap:14px;white-space:nowrap;font:10px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:#d7e4e8}.scroll-link i{display:grid;place-items:center;width:48px;height:48px;border:1px solid rgba(220,242,250,.3);border-radius:50%;font-style:normal;font-size:18px;color:var(--lime);transition:background .2s,color .2s}.scroll-link:hover i{background:var(--lime);color:var(--night)}
+.ticker{overflow:hidden;background:var(--lime);color:var(--night);padding:16px 0}.ticker-track{display:flex;width:max-content;animation:marquee 34s linear infinite}.ticker span{padding:0 25px;white-space:nowrap;font-size:12px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}.ticker b{padding-inline:12px;font-weight:500}@keyframes marquee{to{transform:translateX(-50%)}}
+.manifesto{padding:clamp(100px,13vw,180px) 0;background:var(--paper);color:var(--ink)}.manifesto-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(50px,9vw,140px);align-items:end}.manifesto .eyebrow{color:#477e8b}.manifesto h2{font-size:clamp(54px,7.8vw,112px);line-height:.92;letter-spacing:-.075em;font-weight:600;margin:28px 0 0}.manifesto h2 em{font-style:normal;color:#6caa1f}.manifesto-copy{max-width:510px;padding-bottom:8px}.manifesto-copy p{font-size:clamp(16px,1.45vw,20px);line-height:1.8;color:#4b626d;margin:0 0 22px}.manifesto-copy strong{color:var(--ink)}.manifesto-mark{width:min(190px,42%);margin-top:34px;opacity:.9}
+.statement{display:grid;grid-template-columns:1fr 1fr;background:#0b293b;min-height:640px}.statement-art{min-height:640px;overflow:hidden}.statement-art img{width:100%;height:100%;object-fit:cover;object-position:center}.statement-content{align-self:center;padding:clamp(60px,8vw,120px) clamp(32px,7vw,100px)}.statement h2{font-size:clamp(48px,6vw,88px);line-height:.94;letter-spacing:-.065em;margin:28px 0;font-weight:600}.statement h2 span{color:var(--cyan)}.statement p{max-width:43ch;font-size:16px;line-height:1.85;color:#c0d1d8}
+.system{padding:clamp(100px,13vw,170px) 0;background:var(--night)}.system-head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:54px}.system h2{font-size:clamp(52px,7vw,100px);line-height:.92;letter-spacing:-.075em;margin:26px 0 0}.system-head p{max-width:40ch;color:#b7c8d0;font-size:15px;line-height:1.8;margin:0 0 6px}.system-image{height:clamp(300px,43vw,590px);overflow:hidden;background:var(--deep)}.system-image img{width:100%;height:100%;object-fit:cover;object-position:center 48%}.palette{display:grid;grid-template-columns:repeat(5,1fr);margin-top:14px;gap:8px}.swatch{min-height:100px;padding:14px;display:flex;flex-direction:column;justify-content:space-between;align-items:flex-start;font:10px var(--mono);letter-spacing:.06em}.swatch:nth-child(1){background:#041522}.swatch:nth-child(2){background:#071d2d}.swatch:nth-child(3){background:#0a263a}.swatch:nth-child(4){background:#a6e735;color:#041522}.swatch:nth-child(5){background:#5dc3e0;color:#041522}
+.applications{padding:clamp(100px,13vw,170px) 0;background:#0a2638}.app-head{display:flex;justify-content:space-between;align-items:flex-end;gap:45px;margin-bottom:52px}.app-head h2{font-size:clamp(54px,7.8vw,112px);line-height:.9;letter-spacing:-.075em;margin:26px 0 0}.app-head p{max-width:38ch;color:#c0d0d7;font-size:15px;line-height:1.8;margin:0 0 6px}.gallery{display:grid;grid-template-columns:1.18fr .82fr .82fr;grid-template-rows:clamp(220px,23vw,340px) clamp(190px,18vw,270px);gap:12px}.gallery figure{position:relative;margin:0;overflow:hidden;background:#061724}.gallery figure img{width:100%;height:100%;object-fit:cover;transition:transform .65s cubic-bezier(.2,.7,.2,1)}.gallery figure:hover img{transform:scale(1.035)}.gallery .wide{grid-row:span 2}.gallery .wide img{object-position:center}.gallery figure:nth-child(4){grid-column:2;grid-row:2}.gallery figure:nth-child(5){grid-column:3;grid-row:2}.gallery figure:nth-child(6){grid-column:2;grid-row:3}.gallery figure:nth-child(7){grid-column:3;grid-row:3}.gallery figcaption{position:absolute;inset:auto 0 0;padding:44px 18px 16px;background:linear-gradient(0deg,rgba(3,16,25,.88),transparent);font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#fff}
+.mascot{padding:clamp(100px,13vw,170px) 0;background:var(--paper);color:var(--ink);overflow:hidden}.mascot-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(50px,8vw,120px);align-items:center}.mascot-visual{position:relative;min-height:500px;display:grid;place-items:center;background:radial-gradient(circle,rgba(166,231,53,.2),transparent 65%)}.mascot-visual:before{content:"";position:absolute;width:min(420px,88%);aspect-ratio:1;border:1px solid rgba(16,56,75,.2);border-radius:50%}.mascot-visual img{position:relative;width:min(90%,480px);max-height:520px;object-fit:contain;filter:drop-shadow(0 22px 32px rgba(8,37,51,.16));transition:opacity .2s}.mascot-copy .eyebrow{color:#477e8b}.mascot-copy h2{font-size:clamp(48px,6.5vw,92px);line-height:.94;letter-spacing:-.07em;margin:26px 0;font-weight:600}.mascot-copy h2 span{color:#75ad22}.mascot-copy p{max-width:44ch;color:#536b75;font-size:16px;line-height:1.8}.colors{display:flex;flex-wrap:wrap;gap:13px;margin-top:34px}.color-btn{width:30px;height:30px;border-radius:50%;border:1px solid rgba(16,43,56,.22);background:var(--c);cursor:pointer;position:relative}.color-btn[aria-pressed=true]:after{content:"";position:absolute;inset:-5px;border:1px solid var(--c);border-radius:50%}
+.closing{display:grid;grid-template-columns:1fr 1fr;min-height:510px;background:var(--night)}.closing img{width:100%;height:100%;min-height:510px;object-fit:cover}.closing-content{align-self:center;padding:clamp(55px,8vw,110px)}.closing-content .eyebrow{color:var(--lime)}.closing h2{font-size:clamp(46px,5.6vw,80px);line-height:.98;letter-spacing:-.065em;margin:28px 0;font-weight:600}.closing h2 span{color:var(--lime)}.closing p{color:#c0d0d7;font-size:14px}
+footer{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px var(--pad);background:#03111b;border-top:1px solid var(--line)}.footer-logo{width:100px}.footer-logo img{width:100%}.footer-meta,.backtop{font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#8fa5af}.backtop{color:var(--lime)}
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}.reveal.visible{opacity:1;transform:none}
 :focus-visible{outline:2px solid var(--lime);outline-offset:4px}
-::selection{background:var(--lime);color:#041522}
-@media(max-width:900px){
- .nav{gap:16px}.nav a{font-size:8px}
- .statement{grid-template-columns:1fr 1fr}.statement-art{min-height:520px}
- .statement-content{padding:70px 34px}
- .statement h2{font-size:clamp(42px,6vw,64px)}
- .gallery{grid-auto-rows:minmax(210px,28vw)}
-}
-@media(max-width:760px){
+@media(max-width:900px){.nav{gap:16px}.nav a{font-size:8px}.hero h1{font-size:clamp(60px,9vw,100px)}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:300px 220px 220px}.gallery .wide{grid-column:1;grid-row:1/3}.gallery figure:nth-child(2){grid-column:2;grid-row:1}.gallery figure:nth-child(3){grid-column:2;grid-row:2}.gallery figure:nth-child(4){grid-column:1;grid-row:3}.gallery figure:nth-child(5){grid-column:2;grid-row:3}.gallery figure:nth-child(6),.gallery figure:nth-child(7){display:none}.statement-content{padding-inline:36px}.mascot-visual{min-height:420px}}
+@media(max-width:700px){
  :root{--pad:22px}
- header{padding:16px 22px}
- .hero{height:auto;min-height:720px;height:92svh;max-height:900px}
- .hero-bg img{object-position:61% center;opacity:.55}
- .hero:after{background:linear-gradient(90deg,rgba(2,13,22,.76),rgba(2,13,22,.34)),linear-gradient(0deg,rgba(2,13,22,.96),rgba(2,13,22,.14) 75%)}
- .hero-content{padding:0 22px 54px}
- h1{font-size:clamp(47px,11.4vw,76px);line-height:.94;letter-spacing:-.055em}
- .hero-kicker{margin-bottom:22px}
- .hero-bottom{margin-top:28px}
- .hero-bottom p{max-width:38ch;font-size:15px}
- .manifesto{padding:88px 0}
- .manifesto-grid{grid-template-columns:1fr;gap:34px}
- .manifesto h2{font-size:clamp(43px,10.5vw,72px);line-height:1}
- .manifesto-copy p{font-size:16px}
- .manifesto-mark{width:150px;margin-top:20px}
- .statement{display:flex;flex-direction:column}
- .statement-art{min-height:0;height:auto;aspect-ratio:1.12/1;order:1}
- .statement-content{order:2;padding:58px 22px 74px}
- .statement h2{font-size:clamp(44px,10.5vw,68px);line-height:.98;margin:20px 0}
- .statement p{font-size:15px}
- .system{padding:86px 0}
- .system-head{display:block;margin-bottom:32px}
- .system h2{font-size:clamp(46px,10vw,68px);line-height:.98;margin-top:20px}
- .system-head p{margin-top:22px;font-size:15px}
- .system-image,.system-image img{min-height:240px;height:62vw;max-height:360px}
- .palette{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
- .swatch{height:84px;padding:10px}
- .swatch:last-child{grid-column:span 2}
- .app-head{display:block;margin-bottom:30px}
- .app-head h2{font-size:clamp(46px,10.5vw,70px);line-height:.98;margin-top:20px}
- .app-head p{margin-top:20px;font-size:15px}
- .gallery{grid-template-columns:1fr 1fr;grid-auto-rows:auto;gap:8px}
- .gallery .wide{grid-column:span 2;grid-row:auto}
- .gallery .wide img{height:auto;aspect-ratio:1.2/1;min-height:0}
- .gallery figure img{height:auto;aspect-ratio:1/1;min-height:0}
- .gallery figcaption{padding:36px 12px 12px;font-size:9px;letter-spacing:.08em}
- .mascot{padding:80px 0}
- .mascot-grid{grid-template-columns:1fr;gap:24px}
- .mascot-copy h2{font-size:clamp(46px,10vw,68px);line-height:.98;margin:20px 0}
- .mascot-copy p{font-size:15px}
- .mascot-visual{min-height:320px;order:2;margin-top:8px}
- .mascot-visual img{width:min(88%,380px);max-height:380px}
- .colors{gap:12px;margin-top:28px}
- .color-btn{width:32px;height:32px}
- .closing{display:flex;flex-direction:column;text-align:left}
- .closing img{width:100%;height:auto;min-height:0;aspect-ratio:1.2/1;object-fit:cover}
- .closing-content{width:100%;padding:58px 22px 70px}
- .closing h2{font-size:clamp(42px,9.8vw,64px);line-height:1;margin:20px 0}
- .closing p{font-size:14px}
- footer{padding:22px}
- .footer-logo{width:88px}
+ header{height:84px;padding:14px 22px}.logo{width:104px;flex-basis:104px}.menu{display:grid;place-items:center;width:42px;height:42px;border:1px solid rgba(220,242,250,.25);border-radius:50%;background:rgba(6,23,36,.5);color:#fff;cursor:pointer}.nav{display:none;position:absolute;top:84px;left:0;right:0;padding:24px 22px 28px;background:rgba(6,23,36,.98);border-bottom:1px solid var(--line);align-items:stretch;flex-direction:column;gap:22px}.nav.open{display:flex}.nav a{font-size:11px}.nav .nav-cta{align-self:flex-start}
+ .hero{height:880px;min-height:760px;max-height:92svh}.hero-bg{inset:0 0 0 4%}.hero-bg img{object-position:64% center;opacity:.58}.hero:before{background:linear-gradient(90deg,rgba(6,23,36,.9),rgba(6,23,36,.58)),linear-gradient(0deg,rgba(6,23,36,.94),transparent 60%)}.hero-inner{padding:145px 0 48px}.hero h1{font-size:clamp(43px,10vw,70px);line-height:.98;letter-spacing:-.065em}.hero h1 span{white-space:normal}.hero-bottom{flex-direction:column;align-items:flex-start;gap:24px}.hero-bottom p{max-width:38ch;font-size:15px}.scroll-link{display:none}
+ .ticker{padding:13px 0}.ticker span{font-size:10px}
+ .manifesto{padding:86px 0}.manifesto-grid{grid-template-columns:1fr;gap:36px}.manifesto h2{font-size:clamp(46px,11vw,74px)}.manifesto-copy p{font-size:16px}.manifesto-mark{width:140px;margin-top:20px}
+ .statement{grid-template-columns:1fr}.statement-art{min-height:0;height:auto;aspect-ratio:1.18/1}.statement-content{padding:62px 22px 72px}.statement h2{font-size:clamp(46px,10vw,68px)}.statement p{font-size:15px}
+ .system{padding:86px 0}.system-head{display:block;margin-bottom:32px}.system h2{font-size:clamp(48px,10.5vw,72px)}.system-head p{margin-top:24px;font-size:15px}.system-image{height:260px}.palette{grid-template-columns:repeat(2,1fr);gap:7px}.swatch{min-height:82px;padding:11px}.swatch:last-child{grid-column:span 2}
+ .applications{padding:86px 0}.app-head{display:block;margin-bottom:30px}.app-head h2{font-size:clamp(48px,11vw,74px)}.app-head p{margin-top:22px}.gallery{grid-template-columns:1fr 1fr;grid-template-rows:260px 170px 170px;gap:8px}.gallery .wide{grid-column:1/3;grid-row:1}.gallery figure:nth-child(2){grid-column:1;grid-row:2}.gallery figure:nth-child(3){grid-column:2;grid-row:2}.gallery figure:nth-child(4){grid-column:1;grid-row:3}.gallery figure:nth-child(5){grid-column:2;grid-row:3}.gallery figure:nth-child(6),.gallery figure:nth-child(7){display:none}.gallery figcaption{font-size:8px;padding:34px 10px 10px}
+ .mascot{padding:84px 0}.mascot-grid{grid-template-columns:1fr;gap:26px}.mascot-copy h2{font-size:clamp(48px,10.5vw,72px)}.mascot-copy p{font-size:15px}.mascot-visual{min-height:330px;order:2}.mascot-visual img{width:min(88%,360px);max-height:370px}.colors{gap:13px}
+ .closing{grid-template-columns:1fr}.closing img{min-height:0;height:auto;aspect-ratio:1.25/1}.closing-content{padding:58px 22px 72px}.closing h2{font-size:clamp(44px,10vw,68px)}
+ footer{padding:22px}.footer-meta{display:none}
 }
-@media(max-width:380px){h1{font-size:44px}.manifesto h2,.app-head h2,.mascot-copy h2{font-size:42px}.closing h2{font-size:39px}.gallery figcaption{font-size:8px}}
-
-
-/* Hero: hierarquia limpa e sem sobreposição com o cabeçalho */
-.hero{display:block}
-.hero-content{position:absolute;inset:0;max-width:1500px;margin:0 auto;padding:clamp(150px,18vh,190px) var(--pad) 76px;display:flex;flex-direction:column;justify-content:space-between}
-.hero-kicker{display:none!important}
-h1{font-size:clamp(46px,7.5vw,112px)!important;line-height:.96!important;max-width:1200px!important;letter-spacing:-.055em!important}
-h1 span{white-space:nowrap}
-.hero-bottom{margin:0;align-items:flex-end}
-.hero-bottom p{max-width:48ch}
-@media(max-width:760px){
- .hero{height:92svh;min-height:680px;max-height:900px}
- .hero-content{padding:132px 22px 48px}
- h1{font-size:clamp(38px,9vw,58px)!important;line-height:1!important}
- h1 span{white-space:nowrap}
- .hero-bottom{margin:0}
- .hero-bottom p{font-size:14px;max-width:36ch}
-}
-@media(max-width:360px){h1{font-size:36px!important}}
-
-
-/* Correção definitiva do respiro entre cabeçalho e headline */
-.hero{display:block!important;min-height:700px}
-.hero-kicker{display:none!important}
-.hero-content{position:absolute!important;inset:0!important;width:100%!important;max-width:1500px!important;margin:0 auto!important;padding:190px var(--pad) 72px!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;align-items:flex-start!important}
-.hero-content h1{display:block!important;margin:0!important;font-size:clamp(48px,7.3vw,112px)!important;line-height:.98!important;max-width:1120px!important;letter-spacing:-.055em!important}
-.hero-content h1 span{display:block!important;white-space:nowrap!important;margin-top:.06em}
-.hero-bottom{width:100%;margin:0!important;align-items:flex-end!important}
-@media(max-width:760px){
- .hero{height:92svh!important;min-height:680px!important;max-height:900px!important}
- .hero-content{padding:145px 22px 48px!important}
- .hero-content h1{font-size:clamp(38px,9vw,58px)!important;line-height:1!important}
- .hero-bottom{gap:20px!important}
- .hero-bottom p{max-width:35ch!important;font-size:14px!important}
-}
-
-
-/* NOVO CABEÇALHO + HERO — substitui a composição anterior */
-.masthead-v2{
- position:absolute!important;top:0!important;left:0!important;right:0!important;z-index:80!important;
- height:112px!important;padding:22px clamp(24px,4vw,64px)!important;
- display:flex!important;align-items:center!important;justify-content:space-between!important;
- gap:32px!important;background:transparent!important;border:0!important;backdrop-filter:none!important;
-}
-.masthead-v2.scrolled{background:rgba(4,21,34,.92)!important;backdrop-filter:blur(16px)!important;border-bottom:1px solid rgba(220,242,250,.12)!important}
-.brand-v2{display:block!important;flex:0 0 132px!important;width:132px!important;line-height:0!important}
-.brand-v2 img{display:block!important;width:132px!important;height:auto!important}
-.nav-v2{display:flex!important;align-items:center!important;justify-content:flex-end!important;gap:clamp(18px,3vw,46px)!important}
-.nav-v2 a{font:9px "DM Mono",monospace!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#d7e4ea!important;white-space:nowrap!important}
-.nav-v2 a:hover{color:#a6e735!important}
-.nav-v2 .nav-cta-v2{border:1px solid rgba(166,231,53,.65)!important;padding:13px 18px!important;color:#a6e735!important}
-.nav-cta-v2 span{padding-left:6px}
-.menu-v2{display:none!important}
-.hero-v2{
- position:relative!important;isolation:isolate!important;overflow:hidden!important;
- min-height:760px!important;height:100svh!important;max-height:1000px!important;
- display:block!important;background:#03121e!important;
-}
-.hero-art-v2{position:absolute!important;inset:0!important;z-index:-2!important}
-.hero-art-v2 img{width:100%!important;height:100%!important;object-fit:cover!important;object-position:center center!important;display:block!important}
-.hero-shade-v2{position:absolute!important;inset:0!important;z-index:-1!important;
- background:linear-gradient(90deg,rgba(2,13,22,.88) 0%,rgba(2,13,22,.65) 43%,rgba(2,13,22,.1) 100%),
- linear-gradient(0deg,rgba(2,13,22,.88),transparent 54%,rgba(2,13,22,.12))!important}
-.hero-inner-v2{
- position:relative!important;width:100%!important;height:100%!important;max-width:1600px!important;
- margin:0 auto!important;padding:clamp(170px,19vh,220px) clamp(28px,4.5vw,72px) 64px!important;
- display:flex!important;flex-direction:column!important;justify-content:space-between!important;align-items:flex-start!important;
-}
-.hero-inner-v2 h1{
- display:block!important;margin:0!important;padding:0!important;
- max-width:1120px!important;font-size:clamp(52px,8.3vw,132px)!important;
- line-height:.91!important;letter-spacing:-.065em!important;font-weight:600!important;
- color:#f2f7f8!important;text-wrap:balance!important;
-}
-.hero-inner-v2 h1 span{display:block!important;color:#a6e735!important;margin-top:.08em!important;white-space:nowrap!important}
-.hero-foot-v2{width:100%!important;display:flex!important;align-items:flex-end!important;justify-content:space-between!important;gap:32px!important;margin:0!important}
-.hero-foot-v2 p{max-width:48ch!important;margin:0!important;color:#f0f6f8!important;font-size:clamp(14px,1.35vw,18px)!important;line-height:1.7!important;text-shadow:0 2px 14px rgba(0,0,0,.35)!important}
-.scroll-v2{display:flex!important;align-items:center!important;gap:14px!important;white-space:nowrap!important;font:10px "DM Mono",monospace!important;letter-spacing:.14em!important;text-transform:uppercase!important;color:#e0ebef!important}
-.scroll-v2 i{width:48px!important;height:48px!important;display:grid!important;place-items:center!important;border:1px solid rgba(220,242,250,.25)!important;border-radius:50%!important;color:#a6e735!important;font-style:normal!important;font-size:18px!important}
-@media(max-width:760px){
- .masthead-v2{height:88px!important;padding:16px 22px!important}
- .brand-v2,.brand-v2 img{width:104px!important;flex-basis:104px!important}
- .menu-v2{display:grid!important;place-items:center!important;width:42px!important;height:42px!important;border:1px solid rgba(220,242,250,.24)!important;border-radius:50%!important;background:rgba(4,21,34,.45)!important;color:white!important}
- .nav-v2{display:none!important;position:absolute!important;top:88px!important;left:0!important;right:0!important;padding:24px!important;background:rgba(4,21,34,.97)!important;border-bottom:1px solid rgba(220,242,250,.12)!important;flex-direction:column!important;align-items:stretch!important;gap:22px!important}
- .nav-v2.open{display:flex!important}
- .nav-v2 a{font-size:11px!important}
- .hero-v2{height:92svh!important;min-height:700px!important;max-height:900px!important}
- .hero-art-v2 img{object-position:60% center!important}
- .hero-inner-v2{padding:142px 22px 48px!important}
- .hero-inner-v2 h1{font-size:clamp(42px,9.5vw,68px)!important;line-height:.98!important;letter-spacing:-.06em!important}
- .hero-inner-v2 h1 span{white-space:normal!important}
- .hero-foot-v2{align-items:flex-start!important;flex-direction:column!important;gap:22px!important}
- .hero-foot-v2 p{max-width:38ch!important;font-size:14px!important}
- .scroll-v2{display:none!important}
-}
-@media(max-width:380px){.hero-inner-v2 h1{font-size:39px!important}}
-
+@media(max-width:370px){.hero h1{font-size:40px}.manifesto h2,.app-head h2,.mascot-copy h2{font-size:43px}.gallery{grid-template-rows:220px 150px 150px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}.reveal{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <div class="topline" id="topline"></div>
-<header id="header" class="masthead-v2">
-  <a class="brand-v2" href="#inicio" aria-label="Infinity AI — início"><img src="assets/images/infinity-logo.svg" alt="Infinity AI"></a>
-  <button class="menu-v2" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
-  <nav class="nav-v2" id="nav" aria-label="Navegação principal">
-    <a href="#essencia">Essência</a>
-    <a href="#sistema">Sistema visual</a>
-    <a href="#aplicacoes">Aplicações</a>
-    <a href="#mascote">Mascote</a>
-    <a class="nav-cta-v2" href="#fim">Infinity AI <span>↗</span></a>
-  </nav>
+<header id="header">
+ <a class="logo" href="#inicio" aria-label="Infinity AI — início"><img src="assets/images/infinity-logo.svg" alt="Infinity AI"></a>
+ <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button>
+ <nav class="nav" id="nav" aria-label="Navegação principal">
+  <a href="#essencia">Essência</a><a href="#sistema">Sistema visual</a><a href="#aplicacoes">Aplicações</a><a href="#mascote">Mascote</a><a class="nav-cta" href="#fim">Infinity AI ↗</a>
+ </nav>
 </header>
 <main id="inicio">
-<section class="hero-v2" id="inicio-hero" aria-label="Infinity AI — Inteligência em movimento">
-  <div class="hero-art-v2"><img src="assets/images/hero-cover.svg" alt="" fetchpriority="high"></div>
-  <div class="hero-shade-v2"></div>
-  <div class="hero-inner-v2">
-    <h1>INTELIGÊNCIA<span>EM MOVIMENTO.</span></h1>
-    <div class="hero-foot-v2">
-      <p>Uma identidade criada para traduzir o encontro entre pessoas, tecnologia e resultados — em uma marca que está sempre em evolução.</p>
-      <a href="#essencia" class="scroll-v2"><i>↓</i><span>Explore a identidade</span></a>
-    </div>
-  </div>
+<section class="hero" aria-label="Infinity AI — Inteligência em movimento">
+ <div class="hero-bg"><img src="assets/images/hero-cover.svg" alt="" fetchpriority="high"></div>
+ <div class="wrap hero-inner">
+  <h1>INTELIGÊNCIA<span>EM MOVIMENTO.</span></h1>
+  <div class="hero-bottom"><p>Uma identidade criada para traduzir o encontro entre pessoas, tecnologia e resultados — em uma marca que está sempre em evolução.</p><a class="scroll-link" href="#essencia"><i>↓</i> Explore a identidade</a></div>
+ </div>
 </section>
-<div class="ticker"><div class="ticker-track"><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span></div></div>
-<section class="manifesto" id="essencia"><div class="wrap manifesto-grid"><div class="reveal"><div class="eyebrow">01 / A essência</div><h2>O FUTURO NÃO É UM DESTINO.<br><em>É MOVIMENTO.</em></h2></div><div class="manifesto-copy reveal"><p>A Infinity AI nasce da conexão entre <strong>pessoas, tecnologia e resultados</strong>. Uma marca que traduz inteligência em possibilidades e transforma complexidade em experiências mais simples.</p><p>Seu universo visual parte do símbolo do infinito: continuidade, conexão e evolução sem limites.</p><img class="manifesto-mark" src="assets/images/infinity-ribbon.webp" alt="Elemento gráfico inspirado no símbolo do infinito" loading="lazy"></div></div></section>
-<section class="statement"><div class="statement-art"><img src="assets/images/infinity-glass.webp" alt="" loading="lazy"></div><div class="wrap statement-content reveal"><div class="eyebrow">02 / O conceito</div><h2>UMA IDEIA.<br><span>INFINITAS</span><br>POSSIBILIDADES.</h2><p>As curvas contínuas do símbolo inspiram uma linguagem visual fluida, dinâmica e reconhecível. Um sistema que conecta cada ponto da experiência.</p></div></section>
-<section class="system" id="sistema"><div class="wrap"><div class="system-head"><div class="reveal"><div class="eyebrow">03 / Linguagem visual</div><h2>UMA MARCA.<br>MÚLTIPLAS<br>POSSIBILIDADES.</h2></div><p class="reveal">Contraste, cor e clareza constroem uma identidade de presença tecnológica, mas próxima e humana. Cada elemento tem função — e personalidade.</p></div><div class="system-image reveal"><img src="assets/images/light-trails.webp" alt="Composição visual de luzes e movimento da identidade Infinity AI" loading="lazy"></div><div class="palette reveal"><div class="swatch"><span>01 / Deep</span><span>#041522</span></div><div class="swatch"><span>02 / Navy</span><span>#071D2D</span></div><div class="swatch"><span>03 / Blue</span><span>#0A263A</span></div><div class="swatch"><span>04 / Lime</span><span>#A6E735</span></div><div class="swatch"><span>05 / Cyan</span><span>#5DC3E0</span></div></div></div></section>
-<section class="applications" id="aplicacoes"><div class="wrap"><div class="app-head"><div class="reveal"><div class="eyebrow">04 / A marca no mundo</div><h2>FEITA PARA<br>GANHAR VIDA.</h2></div><p class="reveal">Uma identidade consistente em diferentes pontos de contato: do ambiente digital às experiências presenciais.</p></div><div class="gallery"><figure class="wide reveal"><img src="assets/images/brand-exhibition-wide.webp" alt="Aplicação da identidade Infinity AI em espaço de exposição" loading="lazy"><figcaption>Experiências / ambientes</figcaption></figure><figure class="reveal"><img src="assets/images/dashboard-monitor.webp" alt="Interface digital Infinity AI em monitor" loading="lazy"><figcaption>Digital / interfaces</figcaption></figure><figure class="reveal"><img src="assets/images/brand-campaign-people.webp" alt="Campanha visual Infinity AI com pessoas" loading="lazy"><figcaption>Comunicação / campanhas</figcaption></figure><figure class="reveal"><img src="assets/images/apparel-jacket.webp" alt="Jaqueta com identidade Infinity AI" loading="lazy"><figcaption>Universo / vestuário</figcaption></figure><figure class="reveal"><img src="assets/images/brand-desk-stationery.webp" alt="Papelaria e materiais de marca Infinity AI" loading="lazy"><figcaption>Expressão / papelaria</figcaption></figure><figure class="reveal"><img src="assets/images/brand-outdoor-01.webp" alt="Mídia exterior Infinity AI" loading="lazy"><figcaption>Presença / mídia exterior</figcaption></figure><figure class="reveal"><img src="assets/images/dashboard-phones.webp" alt="Aplicações mobile Infinity AI" loading="lazy"><figcaption>Digital / mobile</figcaption></figure></div></div></section>
-<section class="mascot" id="mascote"><div class="wrap mascot-grid"><div class="mascot-visual reveal"><img id="mascot-img" src="assets/images/mascot-01-verde-lima.webp" alt="Mascote camaleão Infinity AI na versão verde-lima" loading="lazy"></div><div class="mascot-copy reveal"><div class="eyebrow">05 / Personalidade</div><h2>INTELIGENTE.<br><span>ADAPTÁVEL.</span><br>INCONFUNDÍVEL.</h2><p>O camaleão representa a capacidade de adaptação da Infinity AI. Um personagem versátil, que ganha novas cores e expressões sem perder sua identidade.</p><div class="colors" aria-label="Variações de cor do mascote"><button class="color-btn" style="--c:#a6e735" data-src="mascot-01-verde-lima.webp" data-name="verde-lima" aria-label="Verde-lima" aria-pressed="true"></button><button class="color-btn" style="--c:#65d5a7" data-src="mascot-02-verde-ciano.webp" data-name="verde-ciano" aria-label="Verde-ciano" aria-pressed="false"></button><button class="color-btn" style="--c:#36d8ee" data-src="mascot-03-ciano.webp" data-name="ciano" aria-label="Ciano" aria-pressed="false"></button><button class="color-btn" style="--c:#188cf4" data-src="mascot-04-azul.webp" data-name="azul" aria-label="Azul" aria-pressed="false"></button><button class="color-btn" style="--c:#414ce3" data-src="mascot-05-indigo.webp" data-name="índigo" aria-label="Índigo" aria-pressed="false"></button><button class="color-btn" style="--c:#8b59eb" data-src="mascot-06-violeta.webp" data-name="violeta" aria-label="Violeta" aria-pressed="false"></button><button class="color-btn" style="--c:#ffdb32" data-src="mascot-07-amarelo.webp" data-name="amarelo" aria-label="Amarelo" aria-pressed="false"></button><button class="color-btn" style="--c:#ff9a2f" data-src="mascot-08-laranja.webp" data-name="laranja" aria-label="Laranja" aria-pressed="false"></button><button class="color-btn" style="--c:#ff642a" data-src="mascot-09-laranja-intenso.webp" data-name="laranja intenso" aria-label="Laranja intenso" aria-pressed="false"></button><button class="color-btn" style="--c:#ff5e65" data-src="mascot-10-coral.webp" data-name="coral" aria-label="Coral" aria-pressed="false"></button><button class="color-btn" style="--c:#f64aa5" data-src="mascot-11-rosa.webp" data-name="rosa" aria-label="Rosa" aria-pressed="false"></button><button class="color-btn" style="--c:#9c60f1" data-src="mascot-12-violeta.webp" data-name="violeta" aria-label="Violeta" aria-pressed="false"></button></div></div></div></section>
-<section class="closing" id="fim"><img src="assets/images/closing-cover.webp" alt="" loading="lazy"><div class="closing-content reveal"><div class="eyebrow" style="justify-content:center">Infinity AI / Identidade visual</div><h2>PESSOAS. TECNOLOGIA.<br><span>INFINITAS POSSIBILIDADES.</span></h2><p>Uma marca em constante movimento.</p></div></section>
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span></div></div>
+<section class="manifesto" id="essencia"><div class="wrap manifesto-grid">
+ <div class="reveal"><div class="eyebrow">01 / A essência</div><h2>O FUTURO NÃO É UM DESTINO.<br><em>É MOVIMENTO.</em></h2></div>
+ <div class="manifesto-copy reveal"><p>A Infinity AI nasce da conexão entre <strong>pessoas, tecnologia e resultados</strong>. Uma marca que traduz inteligência em possibilidades e transforma complexidade em experiências mais simples.</p><p>Seu universo visual parte do símbolo do infinito: continuidade, conexão e evolução sem limites.</p><img class="manifesto-mark" src="assets/images/infinity-ribbon.webp" alt="Elemento gráfico inspirado no símbolo do infinito" loading="lazy"></div>
+</div></section>
+<section class="statement"><div class="statement-art"><img src="assets/images/infinity-glass.webp" alt="Símbolo do infinito interpretado em arquitetura e luz" loading="lazy"></div><div class="statement-content reveal"><div class="eyebrow">02 / O conceito</div><h2>UMA IDEIA.<br><span>INFINITAS</span><br>POSSIBILIDADES.</h2><p>As curvas contínuas do símbolo inspiram uma linguagem visual fluida, dinâmica e reconhecível. Um sistema que conecta cada ponto da experiência.</p></div></section>
+<section class="system" id="sistema"><div class="wrap">
+ <div class="system-head"><div class="reveal"><div class="eyebrow">03 / Linguagem visual</div><h2>UMA MARCA.<br>MÚLTIPLAS<br>POSSIBILIDADES.</h2></div><p class="reveal">Contraste, cor e clareza constroem uma identidade de presença tecnológica, mas próxima e humana. Cada elemento tem função — e personalidade.</p></div>
+ <div class="system-image reveal"><img src="assets/images/light-trails.webp" alt="Composição visual de luzes e movimento da identidade Infinity AI" loading="lazy"></div>
+ <div class="palette reveal"><div class="swatch"><span>01 / Deep</span><span>#041522</span></div><div class="swatch"><span>02 / Navy</span><span>#071D2D</span></div><div class="swatch"><span>03 / Blue</span><span>#0A263A</span></div><div class="swatch"><span>04 / Lime</span><span>#A6E735</span></div><div class="swatch"><span>05 / Cyan</span><span>#5DC3E0</span></div></div>
+</div></section>
+<section class="applications" id="aplicacoes"><div class="wrap">
+ <div class="app-head"><div class="reveal"><div class="eyebrow">04 / A marca no mundo</div><h2>FEITA PARA<br>GANHAR VIDA.</h2></div><p class="reveal">Uma identidade consistente em diferentes pontos de contato: do ambiente digital às experiências presenciais.</p></div>
+ <div class="gallery">
+  <figure class="wide reveal"><img src="assets/images/brand-exhibition-wide.webp" alt="Aplicação da identidade Infinity AI em espaço de exposição" loading="lazy"><figcaption>Experiências / ambientes</figcaption></figure>
+  <figure class="reveal"><img src="assets/images/dashboard-monitor.webp" alt="Interface digital Infinity AI em monitor" loading="lazy"><figcaption>Digital / interfaces</figcaption></figure>
+  <figure class="reveal"><img src="assets/images/brand-campaign-people.webp" alt="Campanha visual Infinity AI com pessoas" loading="lazy"><figcaption>Comunicação / campanhas</figcaption></figure>
+  <figure class="reveal"><img src="assets/images/apparel-jacket.webp" alt="Jaqueta com identidade Infinity AI" loading="lazy"><figcaption>Universo / vestuário</figcaption></figure>
+  <figure class="reveal"><img src="assets/images/brand-desk-stationery.webp" alt="Papelaria e materiais de marca Infinity AI" loading="lazy"><figcaption>Expressão / papelaria</figcaption></figure>
+  <figure class="reveal"><img src="assets/images/brand-outdoor-01.webp" alt="Mídia exterior Infinity AI" loading="lazy"><figcaption>Presença / mídia exterior</figcaption></figure>
+  <figure class="reveal"><img src="assets/images/dashboard-phones.webp" alt="Aplicações mobile Infinity AI" loading="lazy"><figcaption>Digital / mobile</figcaption></figure>
+ </div>
+</div></section>
+<section class="mascot" id="mascote"><div class="wrap mascot-grid">
+ <div class="mascot-visual reveal"><img id="mascot-img" src="assets/images/mascot-01-verde-lima.webp" alt="Mascote camaleão Infinity AI na versão verde-lima" loading="lazy"></div>
+ <div class="mascot-copy reveal"><div class="eyebrow">05 / Personalidade</div><h2>INTELIGENTE.<br><span>ADAPTÁVEL.</span><br>INCONFUNDÍVEL.</h2><p>O camaleão representa a capacidade de adaptação da Infinity AI. Um personagem versátil, que ganha novas cores e expressões sem perder sua identidade.</p>
+ <div class="colors" aria-label="Variações de cor do mascote">
+  <button class="color-btn" style="--c:#a6e735" data-src="mascot-01-verde-lima.webp" data-name="verde-lima" aria-label="Verde-lima" aria-pressed="true"></button>
+  <button class="color-btn" style="--c:#65d5a7" data-src="mascot-02-verde-ciano.webp" data-name="verde-ciano" aria-label="Verde-ciano" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#36d8ee" data-src="mascot-03-ciano.webp" data-name="ciano" aria-label="Ciano" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#188cf4" data-src="mascot-04-azul.webp" data-name="azul" aria-label="Azul" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#414ce3" data-src="mascot-05-indigo.webp" data-name="índigo" aria-label="Índigo" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#8b59eb" data-src="mascot-06-violeta.webp" data-name="violeta" aria-label="Violeta" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#ffdb32" data-src="mascot-07-amarelo.webp" data-name="amarelo" aria-label="Amarelo" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#ff9a2f" data-src="mascot-08-laranja.webp" data-name="laranja" aria-label="Laranja" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#ff642a" data-src="mascot-09-laranja-intenso.webp" data-name="laranja intenso" aria-label="Laranja intenso" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#ff5e65" data-src="mascot-10-coral.webp" data-name="coral" aria-label="Coral" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#f64aa5" data-src="mascot-11-rosa.webp" data-name="rosa" aria-label="Rosa" aria-pressed="false"></button>
+  <button class="color-btn" style="--c:#9c60f1" data-src="mascot-12-violeta.webp" data-name="violeta" aria-label="Violeta" aria-pressed="false"></button>
+ </div></div>
+</div></section>
+<section class="closing" id="fim"><img src="assets/images/closing-cover.webp" alt="Composição visual Infinity AI em ambiente arquitetônico" loading="lazy"><div class="closing-content reveal"><div class="eyebrow">Infinity AI / Identidade visual</div><h2>PESSOAS. TECNOLOGIA.<br><span>INFINITAS POSSIBILIDADES.</span></h2><p>Uma marca em constante movimento.</p></div></section>
 </main>
 <footer><a class="footer-logo" href="#inicio"><img src="assets/images/infinity-logo.svg" alt="Infinity AI"></a><span class="footer-meta">Identidade visual / 2026</span><a class="backtop" href="#inicio">Voltar ao topo ↑</a></footer>
 <script>
 const header=document.getElementById('header'),topline=document.getElementById('topline'),nav=document.getElementById('nav'),menu=document.getElementById('menu');
-function scrollState(){const max=document.documentElement.scrollHeight-innerHeight;topline.style.setProperty('--progress',max>0?scrollY/max:0);header.classList.toggle('scrolled',scrollY>40)}addEventListener('scroll',scrollState,{passive:true});scrollState();
-menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',open);menu.textContent=open?'×':'☰';nav.classList.toggle('open',open)});nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
-const items=document.querySelectorAll('.reveal');if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const io=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');io.unobserve(e.target)}}),{threshold:.12});items.forEach(el=>io.observe(el))}else items.forEach(el=>el.classList.add('visible'));
-const mascot=document.getElementById('mascot-img');document.querySelectorAll('.color-btn').forEach(btn=>btn.addEventListener('click',()=>{mascot.style.opacity=0;document.querySelectorAll('.color-btn').forEach(b=>b.setAttribute('aria-pressed',String(b===btn)));setTimeout(()=>{mascot.src='assets/images/'+btn.dataset.src;mascot.alt='Mascote camaleão Infinity AI na versão '+btn.dataset.name;mascot.style.opacity=1},160)}));
+function updateScroll(){const max=document.documentElement.scrollHeight-innerHeight;topline.style.setProperty('--progress',max>0?scrollY/max:0);header.classList.toggle('scrolled',scrollY>48)}
+addEventListener('scroll',updateScroll,{passive:true});updateScroll();
+menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'×':'☰';nav.classList.toggle('open',open)});
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
+const revealItems=document.querySelectorAll('.reveal');
+if('IntersectionObserver'in window&&!matchMedia('(prefers-reduced-motion: reduce)').matches){const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});revealItems.forEach(item=>observer.observe(item))}else revealItems.forEach(item=>item.classList.add('visible'));
+const mascot=document.getElementById('mascot-img');
+document.querySelectorAll('.color-btn').forEach(button=>button.addEventListener('click',()=>{mascot.style.opacity=0;document.querySelectorAll('.color-btn').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));setTimeout(()=>{mascot.src='assets/images/'+button.dataset.src;mascot.alt='Mascote camaleão Infinity AI na versão '+button.dataset.name;mascot.style.opacity=1},160)}));
 </script>
-</body></html>
+</body>
+</html>
