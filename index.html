@@ -176,6 +176,22 @@ h1 span{white-space:nowrap}
 }
 @media(max-width:360px){h1{font-size:36px!important}}
 
+
+/* Correção definitiva do respiro entre cabeçalho e headline */
+.hero{display:block!important;min-height:700px}
+.hero-kicker{display:none!important}
+.hero-content{position:absolute!important;inset:0!important;width:100%!important;max-width:1500px!important;margin:0 auto!important;padding:190px var(--pad) 72px!important;display:flex!important;flex-direction:column!important;justify-content:space-between!important;align-items:flex-start!important}
+.hero-content h1{display:block!important;margin:0!important;font-size:clamp(48px,7.3vw,112px)!important;line-height:.98!important;max-width:1120px!important;letter-spacing:-.055em!important}
+.hero-content h1 span{display:block!important;white-space:nowrap!important;margin-top:.06em}
+.hero-bottom{width:100%;margin:0!important;align-items:flex-end!important}
+@media(max-width:760px){
+ .hero{height:92svh!important;min-height:680px!important;max-height:900px!important}
+ .hero-content{padding:145px 22px 48px!important}
+ .hero-content h1{font-size:clamp(38px,9vw,58px)!important;line-height:1!important}
+ .hero-bottom{gap:20px!important}
+ .hero-bottom p{max-width:35ch!important;font-size:14px!important}
+}
+
 </style>
 </head>
 <body>
