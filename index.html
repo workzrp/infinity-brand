@@ -4,245 +4,153 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#061724">
-<meta name="description" content="Infinity — inteligência operacional que conecta sistemas, pessoas, canais, processos e dados em um único ecossistema.">
-<title>Infinity — Inteligência operacional em movimento</title>
+<meta name="description" content="Infinity — inteligência operacional que conecta sistemas, pessoas, canais, processos e dados.">
+<title>Infinity — Inteligência operacional</title>
 <link rel="icon" href="assets/images/infinity-logo.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
-:root{--night:#061724;--night2:#091f2e;--deep:#0b293b;--blue:#123c50;--paper:#edf3f1;--ink:#102b38;--white:#f5f8f7;--muted:#a9bdc5;--lime:#a6e735;--cyan:#5dc3e0;--line:rgba(223,241,244,.15);--pad:clamp(22px,5.5vw,88px);--max:1480px;--sans:"Manrope",Arial,sans-serif;--mono:"DM Mono",monospace;--ease:cubic-bezier(.16,1,.3,1)}
+:root{--navy:#061724;--navy2:#0a2638;--blue:#0b293b;--paper:#edf3f1;--white:#f7f9f8;--ink:#102b38;--muted:#b9cbd2;--lime:#a6e735;--green:#94c134;--cyan:#5dc3e0;--line:rgba(223,241,244,.18);--pad:clamp(22px,5.5vw,88px);--max:1480px;--display:"Manrope",Arial,sans-serif;--body:"Inter",Arial,sans-serif;--ease:cubic-bezier(.16,1,.3,1)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:92px;background:var(--night)}
-body{margin:0;background:var(--night);color:var(--white);font-family:var(--sans);-webkit-font-smoothing:antialiased;overflow-x:hidden}
-body,button,a{font-family:var(--sans)}
-img{display:block;max-width:100%;height:auto}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
-::selection{background:var(--lime);color:var(--night)}
+html{scroll-behavior:smooth;scroll-padding-top:90px;background:var(--navy)}
+body{margin:0;background:var(--navy);color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}a{color:inherit;text-decoration:none}button{font:inherit}
+::selection{background:var(--lime);color:var(--navy)}
 .wrap{width:min(var(--max),calc(100% - var(--pad)*2));margin-inline:auto}
-.mono,.eyebrow,.meta,.nav a,.btn,.section-index{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em}
-.eyebrow{display:flex;align-items:center;gap:11px;font-size:10px;color:var(--lime)}
-.eyebrow:before{content:"";width:22px;height:1px;background:currentColor}
-.topline{position:fixed;z-index:150;inset:0 0 auto;height:2px;background:linear-gradient(90deg,var(--lime),var(--cyan));transform:scaleX(var(--progress,0));transform-origin:left}
-header{position:fixed;z-index:120;inset:0 0 auto;height:88px;padding:16px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:32px;border-bottom:1px solid transparent;transition:background .3s,border-color .3s,backdrop-filter .3s}
-header.scrolled{background:rgba(6,23,36,.88);backdrop-filter:blur(18px);border-color:var(--line)}
-.logo{width:118px;flex:0 0 118px;line-height:0}
-.logo img{width:100%;filter:brightness(0) invert(1)}
-.nav{display:flex;align-items:center;gap:clamp(16px,2.2vw,34px)}
-.nav a{position:relative;font-size:9px;color:#d5e2e6;transition:color .2s}
-.nav a:hover,.nav a[aria-current=location]{color:var(--lime)}
-.nav a:not(.nav-cta):after{content:"";position:absolute;left:0;right:0;bottom:-9px;height:1px;background:var(--lime);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease)}
-.nav a:hover:after,.nav a[aria-current=location]:after{transform:scaleX(1)}
-.nav .nav-cta{padding:13px 17px;border:1px solid rgba(166,231,53,.6);color:var(--lime)}
+.topline{position:fixed;z-index:150;inset:0 0 auto;height:3px;background:linear-gradient(90deg,var(--green),var(--cyan));transform:scaleX(var(--progress,0));transform-origin:left}
+header{position:fixed;z-index:120;inset:0 0 auto;height:88px;padding:16px var(--pad);display:flex;align-items:center;justify-content:space-between;gap:32px;border-bottom:1px solid transparent;transition:background .3s,border-color .3s}
+header.scrolled{background:rgba(6,23,36,.94);border-color:var(--line)}
+.logo{width:124px;flex:0 0 124px;line-height:0}.logo img{width:100%}
+.nav{display:flex;align-items:center;gap:clamp(18px,2.6vw,38px)}
+.nav a{font:600 11px var(--body);color:#e0e9ec;transition:color .2s}.nav a:hover,.nav a[aria-current=location]{color:var(--lime)}
+.nav .nav-cta{padding:13px 18px;border:1px solid rgba(166,231,53,.65);color:var(--lime)}
 .menu{display:none}
-.hero{position:relative;isolation:isolate;overflow:hidden;min-height:790px;height:min(940px,100svh);max-height:1040px;display:flex;align-items:center;background:radial-gradient(ellipse at 76% 48%,rgba(24,92,111,.27),transparent 42%),var(--night)}
-.hero:before{content:"";position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,var(--night) 0%,rgba(6,23,36,.97) 34%,rgba(6,23,36,.5) 69%,rgba(6,23,36,.12)),linear-gradient(0deg,var(--night),transparent 35%)}
-.hero-grid{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(420px,.95fr);align-items:center;gap:3vw;padding-top:110px;padding-bottom:70px}
+.hero{position:relative;min-height:760px;height:min(900px,100svh);display:flex;align-items:center;overflow:hidden;background:var(--navy)}
+.hero:after{content:"";position:absolute;z-index:0;left:0;right:0;bottom:0;height:1px;background:var(--line)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3vw;padding-top:112px;padding-bottom:70px}
 .hero-copy{position:relative;z-index:2}
-.hero h1{max-width:850px;margin:28px 0 26px;font-size:clamp(62px,8.1vw,122px);line-height:.88;letter-spacing:-.085em;font-weight:600}
+.hero-kicker{display:flex;align-items:center;gap:12px;color:var(--cyan);font-size:12px;font-weight:600;letter-spacing:.04em}
+.hero-kicker:before{content:"";width:28px;height:2px;background:var(--lime)}
+.hero h1{max-width:820px;margin:28px 0 24px;font:600 clamp(58px,7.6vw,112px)/.94 var(--display);letter-spacing:-.065em}
 .hero h1 span{display:block;color:var(--lime)}
-.hero-lede{max-width:520px;color:#c3d2d9;font-size:clamp(16px,1.35vw,19px);line-height:1.8}
-.hero-actions{display:flex;align-items:center;gap:22px;flex-wrap:wrap;margin-top:34px}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:20px;min-height:54px;padding:0 20px;font-size:10px;transition:transform .25s var(--ease),background .25s,color .25s,border-color .25s}
-.btn-primary{background:var(--lime);border:1px solid var(--lime);color:var(--night);font-weight:500}
-.btn-primary:hover{background:#c2f36d;border-color:#c2f36d;transform:translateY(-3px)}
-.btn-ghost{border:1px solid rgba(223,241,244,.25);color:var(--white)}
-.btn-ghost:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
-.btn .arrow{font-size:17px;transition:transform .25s var(--ease)}
-.btn:hover .arrow{transform:translate(3px,-2px)}
-.hero-note{display:flex;align-items:center;gap:12px;margin-top:54px;color:#829aa5;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.pulse{width:7px;height:7px;border-radius:50%;background:var(--lime);box-shadow:0 0 0 5px rgba(166,231,53,.1)}
-.hero-visual{position:relative;min-height:590px;display:grid;place-items:center;perspective:1100px}
-.visual-orbit{position:absolute;width:min(39vw,560px);aspect-ratio:1;border:1px solid rgba(93,195,224,.18);border-radius:50%;transform:rotate(-22deg)}
-.visual-orbit:before,.visual-orbit:after{content:"";position:absolute;border:1px solid rgba(166,231,53,.13);border-radius:50%;inset:12% -8%;transform:rotate(62deg)}
-.visual-orbit:after{inset:25% -17%;border-color:rgba(93,195,224,.12);transform:rotate(-38deg)}
-.core{position:relative;width:min(25vw,350px);aspect-ratio:1;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 38% 32%,#1d6273 0,#0b3348 38%,#071b2a 72%);border:1px solid rgba(93,195,224,.45);box-shadow:0 0 100px rgba(36,147,166,.14),inset 0 0 60px rgba(93,195,224,.12)}
-.core:before{content:"";position:absolute;inset:12%;border:1px solid rgba(166,231,53,.32);border-radius:50%;box-shadow:0 0 30px rgba(166,231,53,.08)}
-.core img{width:46%;filter:brightness(0) invert(1);opacity:.95}
-.core-label{position:absolute;bottom:19%;font:9px var(--mono);letter-spacing:.2em;color:var(--lime)}
-.orbit-node{position:absolute;z-index:2;min-width:132px;padding:13px 15px;background:rgba(8,31,46,.92);border:1px solid rgba(93,195,224,.32);box-shadow:0 14px 40px rgba(0,0,0,.22);backdrop-filter:blur(10px)}
-.orbit-node b{display:block;font-size:11px;font-weight:600}
-.orbit-node small{display:block;margin-top:5px;color:#8ca8b3;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.orbit-node:before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--lime);margin-right:7px}
-.node-a{top:12%;left:4%}.node-b{top:18%;right:0}.node-c{bottom:18%;left:0}.node-d{bottom:10%;right:7%}
-.connector{position:absolute;z-index:0;height:1px;background:linear-gradient(90deg,transparent,var(--cyan),transparent);transform-origin:left;opacity:.65}
-.connector.one{width:34%;top:29%;left:18%;transform:rotate(19deg)}
-.connector.two{width:32%;top:34%;right:9%;transform:rotate(151deg)}
-.connector.three{width:35%;bottom:27%;left:16%;transform:rotate(-17deg)}
-.connector.four{width:30%;bottom:22%;right:12%;transform:rotate(198deg)}
-.data-chip{position:absolute;z-index:3;right:4%;top:46%;padding:10px 13px;background:var(--lime);color:var(--night);font:9px var(--mono);letter-spacing:.1em;transform:rotate(4deg)}
-.hero-bottomline{position:absolute;bottom:0;left:var(--pad);right:var(--pad);height:1px;background:var(--line)}
-.hero-bottomline span{position:absolute;right:0;bottom:17px;color:#78909b;font:9px var(--mono);letter-spacing:.14em;text-transform:uppercase}
-.marquee{overflow:hidden;padding:17px 0;background:var(--lime);color:var(--night)}
-.marquee-track{display:flex;width:max-content;animation:marquee 42s linear infinite}
-.marquee span{padding:0 22px;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;white-space:nowrap}
-.marquee i{font-style:normal;padding:0 9px;font-weight:400}
+.hero-lede{max-width:530px;color:#c7d5da;font-size:clamp(16px,1.3vw,19px);line-height:1.8}
+.hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:18px;min-height:54px;padding:0 20px;font-size:11px;font-weight:700;transition:transform .25s var(--ease),background .25s,border-color .25s,color .25s}
+.btn:hover{transform:translateY(-3px)}
+.btn-primary{background:var(--lime);border:1px solid var(--lime);color:var(--navy)}
+.btn-primary:hover{background:#c1ef70;border-color:#c1ef70}
+.btn-outline{border:1px solid rgba(223,241,244,.35);color:var(--white)}.btn-outline:hover{border-color:var(--cyan);color:var(--cyan)}
+.btn .arrow{font-size:17px}
+.hero-art{position:relative;min-height:570px;display:flex;align-items:center;justify-content:center}
+.hero-art:before{content:"";position:absolute;width:78%;aspect-ratio:1;border-radius:50%;background:var(--lime);opacity:.96}
+.hero-art:after{content:"";position:absolute;width:90%;aspect-ratio:1;border:1px solid rgba(93,195,224,.35);border-radius:50%}
+.hero-art img{position:relative;z-index:1;width:min(90%,560px);max-height:590px;object-fit:contain;filter:drop-shadow(0 26px 30px rgba(0,0,0,.18))}
+.hero-art-note{position:absolute;z-index:2;right:0;bottom:9%;padding:14px 18px;background:var(--paper);color:var(--ink);font-size:11px;font-weight:700;letter-spacing:.02em}
+.hero-art-note span{display:block;margin-top:4px;color:#5d747d;font-size:10px;font-weight:400}
+.ticker{overflow:hidden;background:var(--lime);color:var(--navy);padding:16px 0}
+.ticker-track{display:flex;width:max-content;animation:marquee 38s linear infinite}
+.ticker span{padding:0 24px;white-space:nowrap;font:800 12px var(--display);letter-spacing:.08em;text-transform:uppercase}
+.ticker b{padding-inline:12px;color:#56821c}
 @keyframes marquee{to{transform:translateX(-50%)}}
-.intro{padding:clamp(100px,12vw,176px) 0;background:var(--paper);color:var(--ink)}
-.intro-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;align-items:start}
-.intro .eyebrow{color:#507c85}
-.intro h2{margin:26px 0 0;font-size:clamp(48px,6.4vw,94px);line-height:.94;letter-spacing:-.075em;font-weight:600}
-.intro h2 em{font-style:normal;color:#6c9f26}
-.intro-copy{padding-top:55px}
-.intro-copy p{margin:0 0 22px;color:#536873;font-size:clamp(16px,1.25vw,18px);line-height:1.9}
-.intro-copy strong{color:var(--ink)}
-.intro-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:50px;padding-top:24px;border-top:1px solid rgba(16,43,56,.2)}
-.intro-stats b{display:block;font-size:clamp(24px,3vw,40px);letter-spacing:-.06em}
-.intro-stats span{display:block;margin-top:8px;color:#647982;font:8px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.section-dark{padding:clamp(100px,11vw,160px) 0;background:var(--night)}
-.section-head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:60px}
-.section-head h2{max-width:900px;margin:23px 0 0;font-size:clamp(48px,6.7vw,100px);line-height:.92;letter-spacing:-.075em;font-weight:600}
+.manifesto{padding:clamp(90px,11vw,160px) 0;background:var(--paper);color:var(--ink)}
+.manifesto-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:8vw;align-items:start}
+.manifesto h2{margin:0;font:600 clamp(48px,6.5vw,94px)/.98 var(--display);letter-spacing:-.065em}
+.manifesto h2 em{font-style:normal;color:#709f2d}
+.manifesto-copy{padding-top:12px}
+.manifesto-copy p{margin:0 0 22px;color:#536873;font-size:clamp(16px,1.25vw,18px);line-height:1.9}
+.manifesto-copy strong{color:var(--ink)}
+.manifesto-mark{width:min(220px,50%);margin-top:25px}
+.section{padding:clamp(90px,10vw,145px) 0;background:var(--navy)}
+.section-head{display:grid;grid-template-columns:1fr .65fr;gap:6vw;align-items:end;margin-bottom:58px}
+.section-head h2{margin:0;font:600 clamp(48px,6.3vw,92px)/.96 var(--display);letter-spacing:-.065em}
 .section-head h2 span{color:var(--lime)}
-.section-head p{max-width:400px;margin:0 0 7px;color:#a9bdc5;font-size:15px;line-height:1.8}
-.eyebrow .num{color:var(--cyan)}
-.ecosystem{position:relative;display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:stretch}
-.eco-card{position:relative;min-height:220px;padding:26px;background:#0a2638;border:1px solid rgba(223,241,244,.12);overflow:hidden;transition:transform .45s var(--ease),border-color .3s,background .3s}
-.eco-card:hover{transform:translateY(-5px);border-color:rgba(166,231,53,.5);background:#0d2e42}
-.eco-card:nth-child(1){grid-column:span 5;min-height:290px}
-.eco-card:nth-child(2){grid-column:span 4;min-height:290px}
-.eco-card:nth-child(3){grid-column:span 3;min-height:290px}
-.eco-card:nth-child(4){grid-column:span 4}
-.eco-card:nth-child(5){grid-column:span 4}
-.eco-card:nth-child(6){grid-column:span 4}
-.eco-top{display:flex;justify-content:space-between;align-items:center;color:#7f9ba6;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.eco-icon{width:38px;height:38px;display:grid;place-items:center;border:1px solid rgba(93,195,224,.35);border-radius:50%;color:var(--cyan);font-size:17px}
-.eco-card h3{margin:42px 0 12px;font-size:clamp(21px,2.1vw,30px);letter-spacing:-.045em;font-weight:600}
-.eco-card p{max-width:39ch;margin:0;color:#a9bdc5;font-size:13px;line-height:1.75}
-.eco-link{position:absolute;right:25px;bottom:24px;color:var(--lime);font:10px var(--mono)}
-.eco-card:after{content:"";position:absolute;width:180px;height:180px;right:-85px;top:-95px;border:1px solid rgba(93,195,224,.12);border-radius:50%;box-shadow:0 0 0 22px rgba(93,195,224,.025),0 0 0 44px rgba(93,195,224,.02)}
-.flow-section{padding:clamp(90px,10vw,140px) 0;background:#0a2638;overflow:hidden}
-.flow-top{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:end;margin-bottom:55px}
-.flow-top h2{font-size:clamp(46px,6vw,88px);line-height:.95;letter-spacing:-.075em;margin:22px 0 0}
-.flow-top h2 span{color:var(--cyan)}
-.flow-top p{max-width:480px;color:#b2c5cc;font-size:15px;line-height:1.85;margin:0 0 7px}
-.flow-board{position:relative;min-height:440px;padding:48px 36px;background:linear-gradient(135deg,rgba(6,23,36,.96),rgba(8,37,54,.92));border:1px solid rgba(93,195,224,.2);overflow:hidden}
-.flow-board:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(93,195,224,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(93,195,224,.055) 1px,transparent 1px);background-size:34px 34px;mask-image:linear-gradient(90deg,black,transparent 90%)}
-.flow-meta{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;color:#75929d;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.flow-lane{position:relative;z-index:1;display:grid;grid-template-columns:repeat(5,1fr);align-items:center;gap:26px;margin-top:95px}
-.flow-step{position:relative;min-height:126px;padding:17px 14px;background:#0c3045;border:1px solid rgba(93,195,224,.28);display:flex;flex-direction:column;justify-content:space-between}
-.flow-step:not(:last-child):after{content:"";position:absolute;left:100%;top:50%;width:27px;height:1px;background:var(--cyan)}
-.flow-step:not(:last-child):before{content:"";position:absolute;left:calc(100% + 21px);top:calc(50% - 3px);width:6px;height:6px;border-top:1px solid var(--cyan);border-right:1px solid var(--cyan);transform:rotate(45deg)}
-.flow-step .step-no{color:var(--lime);font:9px var(--mono)}
-.flow-step b{font-size:13px;line-height:1.35}
-.flow-step small{color:#86a2ad;font:8px var(--mono);letter-spacing:.08em;text-transform:uppercase}
-.flow-caption{position:relative;z-index:1;display:flex;justify-content:space-between;gap:20px;margin-top:42px;padding-top:18px;border-top:1px solid var(--line);color:#9bb0b9;font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
-.flow-caption strong{color:var(--lime);font-weight:400}
-.story{padding:clamp(100px,12vw,170px) 0;background:var(--paper);color:var(--ink)}
+.section-head p{max-width:440px;margin:0 0 7px;color:#b9cbd2;font-size:15px;line-height:1.85}
+.section-kicker{margin-bottom:20px;color:var(--cyan);font-size:12px;font-weight:600}
+.capabilities{border-top:1px solid var(--line)}
+.capability{display:grid;grid-template-columns:90px 1fr 1fr;gap:28px;align-items:start;padding:30px 0 34px;border-bottom:1px solid var(--line);transition:padding .3s var(--ease)}
+.capability:hover{padding-left:12px}
+.capability-no{color:var(--lime);font:600 13px var(--display)}
+.capability h3{margin:0;font:600 clamp(23px,2.7vw,36px)/1.15 var(--display);letter-spacing:-.035em}
+.capability p{max-width:460px;margin:2px 0 0;color:#b9cbd2;font-size:14px;line-height:1.8}
+.flow-section{padding:clamp(90px,10vw,145px) 0;background:#0a2638}
+.flow-intro{display:grid;grid-template-columns:1fr .8fr;gap:7vw;align-items:end;margin-bottom:62px}
+.flow-intro h2{margin:0;font:600 clamp(48px,6.4vw,92px)/.95 var(--display);letter-spacing:-.065em}
+.flow-intro h2 span{color:var(--cyan)}
+.flow-intro p{margin:0;color:#c1d0d6;font-size:15px;line-height:1.85}
+.flow-steps{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(223,241,244,.3);border-bottom:1px solid rgba(223,241,244,.3)}
+.flow-step{position:relative;padding:25px 18px 30px 0;min-height:190px}
+.flow-step:not(:last-child):after{content:"";position:absolute;top:-4px;right:20px;width:7px;height:7px;border-radius:50%;background:var(--lime)}
+.flow-step span{display:block;margin-bottom:48px;color:var(--lime);font:600 12px var(--display)}
+.flow-step h3{margin:0 0 10px;font:600 18px var(--display)}
+.flow-step p{max-width:190px;margin:0;color:#aebfc6;font-size:12px;line-height:1.7}
+.story{padding:clamp(90px,11vw,160px) 0;background:var(--paper);color:var(--ink)}
 .story-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:8vw;align-items:center}
-.story-visual{position:relative;min-height:560px;display:grid;place-items:center;background:#dce8e4;overflow:hidden}
-.story-visual:before{content:"";position:absolute;width:72%;aspect-ratio:1;border:1px solid rgba(16,43,56,.16);border-radius:50%;box-shadow:0 0 0 38px rgba(16,43,56,.025),0 0 0 76px rgba(16,43,56,.02)}
-.story-visual img{position:relative;z-index:1;width:76%;max-height:490px;object-fit:contain;mix-blend-mode:multiply}
-.story-label{position:absolute;z-index:2;left:24px;top:24px;color:#66818a;font:9px var(--mono);letter-spacing:.12em;text-transform:uppercase}
-.story-copy .eyebrow{color:#507c85}
-.story-copy h2{margin:24px 0;font-size:clamp(45px,5.6vw,80px);line-height:.96;letter-spacing:-.075em}
+.story-visual{position:relative;background:#dce8e4;min-height:540px;display:grid;place-items:center;overflow:hidden}
+.story-visual img{width:88%;max-height:520px;object-fit:contain}
+.story-tag{position:absolute;top:24px;left:24px;color:#526d76;font-size:11px;font-weight:600}
+.story-copy h2{margin:0 0 25px;font:600 clamp(44px,5.6vw,80px)/.98 var(--display);letter-spacing:-.06em}
 .story-copy h2 span{color:#709f2d}
-.story-copy p{max-width:520px;color:#536873;font-size:16px;line-height:1.85}
-.case-proof{margin-top:38px;padding:24px 0;border-top:1px solid rgba(16,43,56,.18);border-bottom:1px solid rgba(16,43,56,.18);display:flex;align-items:center;gap:22px}
-.case-proof b{font-size:clamp(42px,5vw,68px);letter-spacing:-.07em;color:#608d25}
-.case-proof span{max-width:240px;color:#536873;font-size:12px;line-height:1.6}
-.channels{padding:clamp(100px,11vw,160px) 0;background:var(--night)}
-.channels-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.channel-panel{position:relative;min-height:330px;padding:34px;background:#0a2638;border:1px solid var(--line);overflow:hidden}
-.channel-panel h3{font-size:clamp(27px,3vw,42px);letter-spacing:-.06em;margin:54px 0 14px}
-.channel-panel p{max-width:42ch;color:#a9bdc5;font-size:14px;line-height:1.8}
-.channel-panel img{position:absolute;right:24px;bottom:16px;width:120px;opacity:.12;filter:grayscale(1)}
-.channel-panel .eyebrow{color:var(--cyan)}
-.channel-panel:nth-child(2) .eyebrow{color:var(--lime)}
-.closing{position:relative;overflow:hidden;padding:clamp(100px,12vw,170px) 0;background:var(--lime);color:var(--night)}
-.closing:before{content:"∞";position:absolute;right:-.02em;top:-.65em;font-size:clamp(380px,68vw,980px);line-height:1;font-weight:800;letter-spacing:-.12em;color:rgba(6,23,36,.055);pointer-events:none}
-.closing-grid{position:relative;z-index:1;display:grid;grid-template-columns:1fr .75fr;gap:8vw;align-items:end}
-.closing h2{max-width:900px;margin:24px 0 0;font-size:clamp(56px,8vw,118px);line-height:.88;letter-spacing:-.085em;font-weight:600}
-.closing p{max-width:350px;color:rgba(6,23,36,.7);font-size:15px;line-height:1.8}
-.closing .btn{margin-top:22px;background:var(--night);color:var(--lime);border-color:var(--night)}
+.story-copy p{max-width:540px;color:#536873;font-size:15px;line-height:1.9}
+.proof{display:flex;align-items:center;gap:22px;margin-top:36px;padding:22px 0;border-top:1px solid rgba(16,43,56,.2);border-bottom:1px solid rgba(16,43,56,.2)}
+.proof strong{color:#709f2d;font:700 clamp(40px,4.7vw,64px) var(--display);letter-spacing:-.06em;white-space:nowrap}
+.proof span{max-width:230px;color:#536873;font-size:12px;line-height:1.65}
+.applications{padding:clamp(90px,10vw,145px) 0;background:var(--navy)}
+.gallery{display:grid;grid-template-columns:1.35fr .9fr .9fr;gap:14px;align-items:start}
+.gallery figure{margin:0;min-width:0}
+.gallery figure:first-child{grid-row:span 2}
+.gallery img{width:100%;height:auto;transition:transform .6s var(--ease)}
+.gallery figure:hover img{transform:scale(1.015)}
+.gallery figcaption{padding:12px 0 0;color:#c2d2d8;font-size:11px;font-weight:600}
+.channel-band{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--navy2)}
+.channel{padding:clamp(32px,4vw,60px);min-height:330px}
+.channel+ .channel{border-left:1px solid var(--line)}
+.channel h3{margin:0 0 16px;font:600 clamp(27px,3vw,42px)/1.1 var(--display);letter-spacing:-.04em}
+.channel p{max-width:430px;margin:0;color:#b9cbd2;font-size:14px;line-height:1.85}
+.channel img{width:115px;height:85px;object-fit:contain;object-position:left center;margin-top:24px;opacity:.9}
+.closing{padding:clamp(90px,11vw,160px) 0;background:var(--lime);color:var(--navy);overflow:hidden}
+.closing-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:8vw;align-items:end}
+.closing h2{margin:0;font:600 clamp(54px,7.7vw,112px)/.92 var(--display);letter-spacing:-.07em}
+.closing p{max-width:410px;margin:0 0 22px;color:rgba(6,23,36,.75);font-size:15px;line-height:1.85}
+.closing .btn{background:var(--navy);border:1px solid var(--navy);color:var(--lime)}
 .closing .btn:hover{background:#12394b;border-color:#12394b}
-footer{padding:30px var(--pad);background:#03111b;display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line)}
-.footer-logo{width:105px;line-height:0}
-.footer-logo img{width:100%;filter:brightness(0) invert(1)}
-.footer-meta{color:#78909b;font-size:8px}
-.backtop{color:var(--lime);font:9px var(--mono);letter-spacing:.1em;text-transform:uppercase}
+footer{padding:28px var(--pad);background:#03111b;display:flex;justify-content:space-between;align-items:center;gap:20px;border-top:1px solid var(--line)}
+.footer-logo{width:112px;line-height:0}.footer-logo img{width:100%}
+.footer-meta{color:#91a8b1;font-size:10px}.backtop{color:var(--lime);font-size:11px;font-weight:600}
 :focus-visible{outline:2px solid var(--lime);outline-offset:4px}
 .reveal{opacity:1;transform:none}
-.motion-ready .reveal{transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.motion-ready .reveal.is-pending{opacity:0;transform:translateY(28px)}
-.motion-ready .reveal.is-visible{opacity:1;transform:translateY(0)}
-@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.marquee-track{animation:none!important}.motion-ready .reveal,.motion-ready .reveal.is-pending{opacity:1!important;transform:none!important}}
-@media(max-width:1000px){.hero-grid{grid-template-columns:1fr 1fr;gap:10px}.hero h1{font-size:clamp(58px,8vw,90px)}.hero-visual{min-height:500px}.orbit-node{min-width:112px;padding:11px}.node-a{left:0}.node-b{right:-2%}.node-c{left:-2%}.node-d{right:0}.eco-card:nth-child(n){grid-column:span 6;min-height:240px}.eco-card:nth-child(1),.eco-card:nth-child(2){min-height:270px}.flow-lane{gap:15px}.flow-step{padding:14px 10px}.flow-step:not(:last-child):after{width:16px}.flow-step:not(:last-child):before{left:calc(100% + 11px)}}
+.motion-ready .reveal{transition:opacity .75s var(--ease),transform .75s var(--ease)}
+.motion-ready .reveal.is-pending{opacity:0;transform:translateY(22px)}
+.motion-ready .reveal.is-visible{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}.ticker-track{animation:none!important}.motion-ready .reveal,.motion-ready .reveal.is-pending{opacity:1!important;transform:none!important}}
+@media(max-width:950px){.hero-grid{grid-template-columns:1fr  .85fr}.hero-art{min-height:460px}.section-head{grid-template-columns:1fr .8fr}.capability{grid-template-columns:60px 1fr 1fr}.story-grid{gap:5vw}.story-visual{min-height:430px}}
 @media(max-width:700px){
  :root{--pad:22px}
- header{height:74px;padding:12px 22px;background:rgba(6,23,36,.9);backdrop-filter:blur(14px)}
- .logo{width:104px;flex-basis:104px}
- .menu{display:flex;width:44px;height:44px;flex-direction:column;justify-content:center;gap:6px;padding:0 12px;border:1px solid rgba(220,242,250,.25);border-radius:50%;background:transparent}
+ header{height:74px;padding:12px 22px;background:rgba(6,23,36,.93)}
+ .logo{width:106px;flex-basis:106px}
+ .menu{display:flex;width:44px;height:44px;flex-direction:column;justify-content:center;gap:6px;padding:0 12px;border:1px solid rgba(220,242,250,.28);border-radius:50%;background:transparent}
  .menu span{height:1px;background:#fff;transition:transform .2s}
- .menu[aria-expanded=true] span:first-child{transform:translateY(3.5px) rotate(45deg)}
- .menu[aria-expanded=true] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
- .nav{position:absolute;display:flex;top:74px;left:0;right:0;padding:14px 22px 25px;background:rgba(6,23,36,.98);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .22s,transform .25s var(--ease),visibility .25s}
+ .menu[aria-expanded=true] span:first-child{transform:translateY(3.5px) rotate(45deg)}.menu[aria-expanded=true] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+ .nav{position:absolute;display:flex;top:74px;left:0;right:0;padding:12px 22px 24px;background:rgba(6,23,36,.99);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0;visibility:hidden;opacity:0;pointer-events:none;transform:translateY(-8px);transition:opacity .22s,transform .25s var(--ease),visibility .25s}
  .nav.open{visibility:visible;opacity:1;pointer-events:auto;transform:none}
- .nav a{padding:15px 0;border-bottom:1px solid rgba(223,241,244,.1);font-size:10px}
- .nav .nav-cta{align-self:flex-start;margin-top:16px;padding:13px 16px;border:1px solid rgba(166,231,53,.6)}
- .hero{height:auto;min-height:0;max-height:none;padding:118px 0 44px}
- .hero:before{background:linear-gradient(180deg,rgba(6,23,36,.2),var(--night) 76%),linear-gradient(90deg,var(--night),rgba(6,23,36,.45))}
- .hero-grid{grid-template-columns:1fr;padding-top:28px;padding-bottom:24px;gap:0}
- .hero h1{font-size:clamp(53px,13vw,84px);margin:23px 0 20px}
- .hero-lede{font-size:15px;max-width:42ch}
- .hero-actions{gap:12px;margin-top:26px}
- .btn{min-height:50px;padding:0 14px;gap:12px;font-size:9px}
- .hero-note{margin-top:27px}
- .hero-visual{min-height:390px;margin-top:15px}
- .visual-orbit{width:min(82vw,410px)}
- .core{width:min(55vw,260px)}
- .orbit-node{min-width:105px;padding:10px 11px}
- .orbit-node b{font-size:10px}
- .orbit-node small{font-size:7px}
- .node-a{top:5%;left:0}.node-b{top:13%;right:0}.node-c{bottom:12%;left:0}.node-d{bottom:5%;right:0}
- .data-chip{right:1%;top:45%;font-size:7px}
- .intro,.section-dark,.channels{padding:78px 0}
- .intro-grid,.story-grid,.flow-top,.closing-grid{grid-template-columns:1fr;gap:28px}
- .intro h2{font-size:clamp(48px,12vw,72px)}
- .intro-copy{padding-top:0}
- .intro-stats{gap:10px;margin-top:32px}
- .intro-stats b{font-size:28px}
- .intro-stats span{font-size:7px;line-height:1.5}
- .section-head{display:block;margin-bottom:32px}
- .section-head h2{font-size:clamp(48px,12vw,74px)}
- .section-head p{margin-top:20px;font-size:14px}
- .ecosystem{gap:9px}
- .eco-card:nth-child(n){grid-column:span 6;min-height:225px;padding:18px}
- .eco-card h3{font-size:20px;margin-top:36px}
- .eco-card p{font-size:12px}
- .eco-card:nth-child(1),.eco-card:nth-child(2){min-height:245px}
- .eco-link{right:16px;bottom:15px;font-size:8px}
- .flow-section{padding:78px 0}
- .flow-top{gap:18px;margin-bottom:32px}
- .flow-top h2{font-size:clamp(46px,11vw,68px)}
- .flow-top p{font-size:14px}
- .flow-board{padding:22px 16px;min-height:0}
- .flow-meta{font-size:7px}
- .flow-lane{grid-template-columns:1fr;gap:10px;margin-top:30px}
- .flow-step{min-height:84px;padding:13px 15px}
- .flow-step:not(:last-child):after{left:50%;top:100%;width:1px;height:11px;background:var(--cyan)}
- .flow-step:not(:last-child):before{left:calc(50% - 3px);top:calc(100% + 5px);transform:rotate(135deg)}
- .flow-step b{font-size:13px}
- .flow-caption{margin-top:25px;font-size:7px;line-height:1.6}
- .story{padding:78px 0}
- .story-grid{gap:32px}
- .story-visual{min-height:330px;order:2}
- .story-visual img{width:68%;max-height:300px}
- .story-copy h2{font-size:clamp(45px,11vw,68px)}
- .story-copy p{font-size:14px}
- .case-proof{gap:14px;margin-top:28px}
- .case-proof b{font-size:46px}
- .case-proof span{font-size:11px}
- .channels-grid{grid-template-columns:1fr}
- .channel-panel{min-height:290px;padding:25px}
- .channel-panel h3{margin-top:42px}
- .closing{padding:82px 0}
- .closing h2{font-size:clamp(54px,13vw,82px)}
- .closing p{margin-top:22px}
- footer{padding:22px;flex-wrap:wrap}
- .footer-meta{display:none}
+ .nav a{padding:15px 0;border-bottom:1px solid rgba(223,241,244,.1);font-size:12px}.nav .nav-cta{align-self:flex-start;margin-top:15px;padding:12px 16px;border:1px solid rgba(166,231,53,.6)}
+ .hero{height:auto;min-height:0;padding:110px 0 30px}.hero-grid{grid-template-columns:1fr;padding-top:30px;padding-bottom:20px;gap:0}
+ .hero h1{font-size:clamp(52px,12.8vw,82px);margin:23px 0 20px}.hero-lede{font-size:15px}
+ .hero-actions{gap:10px;margin-top:25px}.btn{min-height:50px;padding:0 14px;gap:12px;font-size:10px}
+ .hero-art{min-height:350px;margin-top:15px}.hero-art:before{width:70%}.hero-art:after{width:82%}.hero-art img{width:min(78%,360px);max-height:370px}.hero-art-note{right:0;bottom:5%;padding:11px 13px;font-size:10px}
+ .ticker{padding:13px 0}.ticker span{font-size:10px}
+ .manifesto,.section,.flow-section,.story,.applications{padding:76px 0}
+ .manifesto-grid,.story-grid,.closing-grid{grid-template-columns:1fr;gap:28px}.manifesto h2{font-size:clamp(48px,11.5vw,72px)}.manifesto-copy{padding:0}.manifesto-copy p{font-size:15px}.manifesto-mark{width:155px}
+ .section-head,.flow-intro{grid-template-columns:1fr;gap:18px;margin-bottom:35px}.section-head h2,.flow-intro h2{font-size:clamp(47px,11.5vw,72px)}.section-head p,.flow-intro p{font-size:14px}
+ .capability{grid-template-columns:38px 1fr;gap:12px;padding:23px 0}.capability h3{font-size:23px}.capability p{grid-column:2;font-size:13px;margin-top:-2px}
+ .flow-steps{grid-template-columns:1fr;border-bottom:0}.flow-step{min-height:0;padding:20px 0 22px 38px;border-bottom:1px solid rgba(223,241,244,.22)}.flow-step span{position:absolute;left:0;top:22px;margin:0}.flow-step p{max-width:100%}.flow-step:not(:last-child):after{top:auto;right:auto;left:4px;bottom:-4px}
+ .story-grid{gap:32px}.story-visual{min-height:330px;order:2}.story-visual img{width:75%;max-height:320px}.story-copy h2{font-size:clamp(45px,10.8vw,68px)}.story-copy p{font-size:14px}.proof{gap:14px}.proof strong{font-size:43px}.proof span{font-size:11px}
+ .gallery{grid-template-columns:1fr 1fr;gap:18px 10px}.gallery figure:first-child{grid-row:auto;grid-column:span 2}.gallery figcaption{font-size:10px}
+ .channel-band{grid-template-columns:1fr}.channel{min-height:0;padding:32px 24px}.channel+.channel{border-left:0;border-top:1px solid var(--line)}
+ .closing{padding:78px 0}.closing h2{font-size:clamp(54px,12.8vw,80px)}.closing p{margin-top:5px;font-size:14px}
+ footer{padding:22px;flex-wrap:wrap}.footer-meta{display:none}
 }
-@media(max-width:370px){.hero h1{font-size:49px}.hero-visual{min-height:340px}.orbit-node{min-width:94px}.eco-card:nth-child(n){padding:14px}.eco-card h3{font-size:18px}}
+@media(max-width:370px){.hero h1{font-size:48px}.hero-art{min-height:300px}.btn{font-size:9px}}
 </style>
 </head>
 <body>
@@ -251,128 +159,98 @@ footer{padding:30px var(--pad);background:#03111b;display:flex;justify-content:s
  <a class="logo" href="#inicio" aria-label="Infinity — início"><img src="assets/images/infinity-logo.svg" alt="Infinity"></a>
  <button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false" aria-controls="nav"><span></span><span></span></button>
  <nav class="nav" id="nav" aria-label="Navegação principal">
-  <a href="#visao">Visão</a><a href="#ecossistema">Ecossistema</a><a href="#fluxo">Como funciona</a><a href="#impacto">Aplicações</a><a class="nav-cta" href="#conversa">Converse com a gente ↗</a>
+  <a href="#visao">A visão</a><a href="#ecossistema">Ecossistema</a><a href="#fluxo">Como funciona</a><a href="#impacto">Aplicações</a><a class="nav-cta" href="#conversa">Vamos conversar ↗</a>
  </nav>
 </header>
 <main id="inicio">
 <section class="hero" aria-labelledby="hero-title">
  <div class="wrap hero-grid">
   <div class="hero-copy">
-   <div class="eyebrow">Inteligência operacional / Plataforma integrada</div>
-   <h1 id="hero-title">OPERAÇÕES<br>EM OUTRO <span>NÍVEL.</span></h1>
-   <p class="hero-lede">Conecte sistemas, pessoas, canais e processos em um ecossistema inteligente. O Infinity transforma operações fragmentadas em fluxos coordenados — da execução à decisão.</p>
-   <div class="hero-actions"><a class="btn btn-primary" href="#ecossistema">Explore o ecossistema <span class="arrow" aria-hidden="true">↘</span></a><a class="btn btn-ghost" href="#fluxo">Entenda como funciona <span class="arrow" aria-hidden="true">↗</span></a></div>
-   <div class="hero-note"><span class="pulse"></span> Sistemas conectados. Inteligência em ação.</div>
+   <div class="hero-kicker">Inteligência operacional</div>
+   <h1 id="hero-title">O FUTURO DA<br>OPERAÇÃO É <span>INTEGRADO.</span></h1>
+   <p class="hero-lede">O Infinity conecta sistemas, pessoas, canais e processos para transformar operações complexas em jornadas mais simples, coordenadas e inteligentes.</p>
+   <div class="hero-actions"><a class="btn btn-primary" href="#ecossistema">Conheça o Infinity <span class="arrow" aria-hidden="true">↘</span></a><a class="btn btn-outline" href="#fluxo">Veja como funciona <span class="arrow" aria-hidden="true">↗</span></a></div>
   </div>
-  <div class="hero-visual" aria-label="Representação conceitual do ecossistema Infinity conectando canais, agentes, processos e dados">
-   <div class="visual-orbit"></div><span class="connector one"></span><span class="connector two"></span><span class="connector three"></span><span class="connector four"></span>
-   <div class="core"><img src="assets/images/infinity-logo.svg" alt=""><span class="core-label">INFINITY CORE</span></div>
-   <div class="orbit-node node-a"><b>Integrações</b><small>APIs / sistemas</small></div>
-   <div class="orbit-node node-b"><b>Agentes IA</b><small>Inteligência ativa</small></div>
-   <div class="orbit-node node-c"><b>Operações</b><small>Pessoas / processos</small></div>
-   <div class="orbit-node node-d"><b>Data Analyzer</b><small>Dados / decisões</small></div>
-   <div class="data-chip">FLUXO CONECTADO ↗</div>
+  <div class="hero-art" aria-label="Mascote oficial da identidade Infinity">
+   <img src="assets/images/mascot-01-verde-lima.webp" alt="Mascote Infinity em verde-lima">
+   <div class="hero-art-note">Tecnologia em movimento<span>Uma inteligência que conecta.</span></div>
   </div>
  </div>
- <div class="hero-bottomline"><span>Uma infraestrutura. Múltiplas possibilidades.</span></div>
 </section>
-<div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Sistemas <i>×</i> Pessoas <i>×</i> Canais <i>×</i> Processos <i>×</i> Inteligência <i>×</i> Dados <i>×</i></span><span>Sistemas <i>×</i> Pessoas <i>×</i> Canais <i>×</i> Processos <i>×</i> Inteligência <i>×</i> Dados <i>×</i></span></div></div>
-<section class="intro" id="visao">
- <div class="wrap intro-grid">
-  <div class="reveal"><div class="eyebrow">01 / A visão</div><h2>MENOS ILHAS.<br><em>MAIS INTELIGÊNCIA.</em></h2></div>
-  <div class="intro-copy reveal"><p>Empresas não precisam de mais ferramentas isoladas. Precisam fazer as que já existem <strong>trabalharem juntas</strong>.</p><p>O Infinity é uma infraestrutura de inteligência operacional que integra tecnologia, equipes e jornadas em um ambiente coordenado. Conecta fontes de informação, automatiza etapas, apoia decisões e mantém os processos em movimento.</p><div class="intro-stats"><div><b>01</b><span>Ecossistema integrado</span></div><div><b>360°</b><span>Visão da operação</span></div><div><b>∞</b><span>Possibilidades de conexão</span></div></div></div>
+<div class="ticker" aria-hidden="true"><div class="ticker-track"><span>Sistemas <b>×</b> Pessoas <b>×</b> Canais <b>×</b> Processos <b>×</b> Inteligência <b>×</b> Dados <b>×</b></span><span>Sistemas <b>×</b> Pessoas <b>×</b> Canais <b>×</b> Processos <b>×</b> Inteligência <b>×</b> Dados <b>×</b></span></div></div>
+<section class="manifesto" id="visao">
+ <div class="wrap manifesto-grid">
+  <div class="reveal"><h2>MENOS ILHAS.<br><em>MAIS CONEXÃO.</em></h2></div>
+  <div class="manifesto-copy reveal"><p>Empresas não precisam de mais ferramentas isoladas. Precisam fazer as que já existem <strong>trabalharem juntas</strong>.</p><p>O Infinity é uma plataforma de inteligência operacional que integra tecnologia, equipes e jornadas em um ambiente coordenado. Conecta fontes de informação, automatiza etapas, apoia decisões e mantém os processos em movimento.</p><img class="manifesto-mark" src="assets/images/infinity-logo.svg" alt="Marca Infinity"></div>
  </div>
 </section>
-<section class="section-dark" id="ecossistema">
+<section class="section" id="ecossistema">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="eyebrow"><span class="num">02 /</span> O ecossistema</div><h2>UMA OPERAÇÃO.<br><span>VÁRIAS INTELIGÊNCIAS.</span></h2></div><p>Os recursos do Infinity atuam em conjunto. Cada módulo resolve uma parte da operação — e a integração entre eles cria uma visão muito maior.</p></div>
-  <div class="ecosystem">
-   <article class="eco-card reveal"><div class="eco-top"><span>01 / Conectividade</span><span class="eco-icon" aria-hidden="true">⌘</span></div><h3>Integrações & APIs</h3><p>Conecte sistemas e bases existentes para fazer informações circularem entre plataformas, áreas e etapas do trabalho.</p><span class="eco-link">Conectar ↗</span></article>
-   <article class="eco-card reveal"><div class="eco-top"><span>02 / Execução</span><span class="eco-icon" aria-hidden="true">↗</span></div><h3>Automação de processos</h3><p>Organize etapas, regras e encaminhamentos para reduzir tarefas manuais e dar continuidade aos fluxos operacionais.</p><span class="eco-link">Orquestrar ↗</span></article>
-   <article class="eco-card reveal"><div class="eco-top"><span>03 / Inteligência</span><span class="eco-icon" aria-hidden="true">✳</span></div><h3>Agentes de IA</h3><p>Agentes que apoiam o atendimento e a execução assistida, conectados aos contextos e processos da organização.</p><span class="eco-link">Ativar ↗</span></article>
-   <article class="eco-card reveal"><div class="eco-top"><span>04 / Comunicação</span><span class="eco-icon" aria-hidden="true">⌁</span></div><h3>Canais conectados</h3><p>Integre jornadas de comunicação por WhatsApp, e-mail e outros pontos de contato com a operação.</p><span class="eco-link">Comunicar ↗</span></article>
-   <article class="eco-card reveal"><div class="eco-top"><span>05 / Dados</span><span class="eco-icon" aria-hidden="true">▥</span></div><h3>Data Analyzer</h3><p>Reúna e analise informações operacionais para acompanhar indicadores, identificar padrões e apoiar decisões.</p><span class="eco-link">Analisar ↗</span></article>
-   <article class="eco-card reveal"><div class="eco-top"><span>06 / Experiência</span><span class="eco-icon" aria-hidden="true">▦</span></div><h3>Portais, QR Codes & totens</h3><p>Crie pontos de acesso digitais e presenciais para organizar solicitações, consultas e jornadas de atendimento.</p><span class="eco-link">Aproximar ↗</span></article>
+  <div class="section-head reveal"><div><div class="section-kicker">O ecossistema Infinity</div><h2>UMA PLATAFORMA.<br><span>MUITAS POSSIBILIDADES.</span></h2></div><p>Uma estrutura flexível que reúne recursos e ferramentas para conectar a operação de ponta a ponta. Os módulos trabalham juntos, respeitando a realidade de cada organização.</p></div>
+  <div class="capabilities">
+   <article class="capability reveal"><span class="capability-no">01</span><h3>Integrações & APIs</h3><p>Conecte sistemas, plataformas e bases existentes para fazer as informações circularem entre áreas e etapas do trabalho.</p></article>
+   <article class="capability reveal"><span class="capability-no">02</span><h3>Automação de processos</h3><p>Organize etapas, regras e encaminhamentos para reduzir tarefas manuais e dar continuidade aos fluxos operacionais.</p></article>
+   <article class="capability reveal"><span class="capability-no">03</span><h3>Agentes inteligentes</h3><p>Agentes de IA que apoiam o atendimento e a execução assistida, conectados ao contexto e aos processos da organização.</p></article>
+   <article class="capability reveal"><span class="capability-no">04</span><h3>Canais conectados</h3><p>Integre jornadas de comunicação por WhatsApp, e-mail e outros pontos de contato com a operação.</p></article>
+   <article class="capability reveal"><span class="capability-no">05</span><h3>Data Analyzer</h3><p>Reúna e analise informações operacionais para acompanhar indicadores, identificar padrões e apoiar decisões.</p></article>
+   <article class="capability reveal"><span class="capability-no">06</span><h3>Portais, QR Codes & totens</h3><p>Crie pontos de acesso digitais e presenciais para organizar solicitações, consultas e jornadas de atendimento.</p></article>
   </div>
  </div>
 </section>
 <section class="flow-section" id="fluxo">
  <div class="wrap">
-  <div class="flow-top reveal"><div><div class="eyebrow"><span class="num">03 /</span> Inteligência em movimento</div><h2>DA INFORMAÇÃO<br>À <span>EXECUÇÃO.</span></h2></div><p>O Infinity conecta a entrada de uma demanda à ação que precisa acontecer. Sistemas compartilham contexto, regras orientam o fluxo, pessoas e agentes atuam e os dados retornam para a operação.</p></div>
-  <div class="flow-board reveal">
-   <div class="flow-meta"><span>Modelo conceitual de fluxo</span><span>Entrada / processamento / ação / análise</span></div>
-   <div class="flow-lane">
-    <div class="flow-step"><span class="step-no">01 / INPUT</span><b>Sistemas e canais</b><small>Dados e solicitações</small></div>
-    <div class="flow-step"><span class="step-no">02 / ROUTING</span><b>Integração e regras</b><small>Contexto e validação</small></div>
-    <div class="flow-step"><span class="step-no">03 / INTELLIGENCE</span><b>Agentes e equipes</b><small>Decisão assistida</small></div>
-    <div class="flow-step"><span class="step-no">04 / ACTION</span><b>Execução do processo</b><small>Automação e atendimento</small></div>
-    <div class="flow-step"><span class="step-no">05 / INSIGHT</span><b>Dados e indicadores</b><small>Acompanhamento contínuo</small></div>
-   </div>
-   <div class="flow-caption"><span>Fluxo integrado, com contexto compartilhado</span><strong>O processo continua. A inteligência também.</strong></div>
+  <div class="flow-intro reveal"><div><h2>DA INFORMAÇÃO<br>À <span>TRANSFORMAÇÃO.</span></h2></div><p>O Infinity conecta a entrada de uma demanda à ação que precisa acontecer. Sistemas compartilham contexto, regras orientam o fluxo, pessoas e agentes atuam e os dados retornam para a operação.</p></div>
+  <div class="flow-steps">
+   <article class="flow-step reveal"><span>01</span><h3>Entrada</h3><p>Sistemas, canais e solicitações.</p></article>
+   <article class="flow-step reveal"><span>02</span><h3>Integração</h3><p>Informações, contexto e regras.</p></article>
+   <article class="flow-step reveal"><span>03</span><h3>Inteligência</h3><p>Agentes e equipes em colaboração.</p></article>
+   <article class="flow-step reveal"><span>04</span><h3>Execução</h3><p>Automação, atendimento e ação.</p></article>
+   <article class="flow-step reveal"><span>05</span><h3>Evolução</h3><p>Dados, indicadores e decisões.</p></article>
   </div>
  </div>
 </section>
 <section class="story" id="impacto">
  <div class="wrap story-grid">
-  <div class="story-visual reveal"><span class="story-label">Aplicação / Validação de informações</span><img src="assets/images/mascot-01-verde-lima.webp" alt="Mascote Infinity em verde-lima, elemento da identidade visual da plataforma" loading="lazy"></div>
-  <div class="story-copy reveal"><div class="eyebrow">04 / Aplicação real</div><h2>INTELIGÊNCIA QUE<br><span>APARECE NO RESULTADO.</span></h2><p>Em uma aplicação no contexto de gestão pública, o cruzamento e a validação de informações de vale-transporte ajudaram a identificar inconsistências e gerar uma economia de R$ 700 mil em folha.</p><p>É o potencial da inteligência operacional: conectar dados que antes estavam separados e transformar informação em ação mais precisa.</p><div class="case-proof"><b>R$ 700 mil</b><span>Economia registrada na aplicação de validação de vale-transporte.</span></div></div>
+  <div class="story-visual reveal"><span class="story-tag">Inteligência aplicada à gestão pública</span><img src="assets/images/mascot-01-verde-lima.webp" alt="Mascote Infinity" loading="lazy"></div>
+  <div class="story-copy reveal"><h2>INTELIGÊNCIA QUE<br><span>GERA RESULTADOS.</span></h2><p>Em uma aplicação no contexto de gestão pública, o cruzamento e a validação de informações de vale-transporte ajudaram a identificar inconsistências e gerar uma economia de R$ 700 mil em folha.</p><p>É o potencial da inteligência operacional: conectar dados que antes estavam separados e transformar informação em ação mais precisa.</p><div class="proof"><strong>R$ 700 mil</strong><span>Economia registrada na aplicação de validação de vale-transporte.</span></div></div>
  </div>
 </section>
-<section class="channels">
+<section class="applications">
  <div class="wrap">
-  <div class="section-head reveal"><div><div class="eyebrow"><span class="num">05 /</span> Uma camada de conexão</div><h2>DO BACKOFFICE<br>AO <span>PONTO DE CONTATO.</span></h2></div><p>O Infinity não termina nos sistemas internos. Ele também conecta a operação à experiência de quem solicita, acompanha ou recebe um serviço.</p></div>
-  <div class="channels-grid">
-   <article class="channel-panel reveal"><div class="eyebrow">Experiência digital</div><h3>Portais e jornadas digitais</h3><p>Portais públicos e acessos por QR Code podem organizar a entrada de solicitações, consultas e informações em uma jornada mais direta.</p><img src="assets/images/dashboard-phones.webp" alt="" loading="lazy"></article>
-   <article class="channel-panel reveal"><div class="eyebrow">Experiência presencial</div><h3>Atendimento conectado</h3><p>Totens e pontos físicos podem funcionar como portas de entrada para fluxos integrados, aproximando o atendimento da estrutura operacional.</p><img src="assets/images/brand-exhibition-wide.webp" alt="" loading="lazy"></article>
+  <div class="section-head reveal"><div><div class="section-kicker">Tecnologia que chega mais longe</div><h2>DO SISTEMA<br>À <span>EXPERIÊNCIA.</span></h2></div><p>Uma operação conectada também melhora a experiência de quem solicita, acompanha ou recebe um serviço — no digital e no presencial.</p></div>
+  <div class="gallery">
+   <figure class="reveal"><img src="assets/images/brand-exhibition-wide.webp" alt="Aplicação visual da marca Infinity em ambiente de exposição" loading="lazy"><figcaption>Uma marca, diferentes pontos de contato</figcaption></figure>
+   <figure class="reveal"><img src="assets/images/dashboard-phones.webp" alt="Interfaces digitais e painéis da plataforma" loading="lazy"><figcaption>Portais e jornadas digitais</figcaption></figure>
+   <figure class="reveal"><img src="assets/images/mascot-01-verde-lima.webp" alt="Mascote oficial Infinity" loading="lazy"><figcaption>Identidade que aproxima a tecnologia</figcaption></figure>
+  </div>
+  <div class="channel-band">
+   <article class="channel reveal"><h3>Experiências digitais</h3><p>Portais públicos e acessos por QR Code organizam solicitações, consultas e informações em jornadas mais diretas.</p><img src="assets/images/dashboard-phones.webp" alt="" loading="lazy"></article>
+   <article class="channel reveal"><h3>Atendimento presencial</h3><p>Totens e pontos físicos funcionam como portas de entrada para fluxos integrados, aproximando o atendimento da estrutura operacional.</p><img src="assets/images/brand-exhibition-wide.webp" alt="" loading="lazy"></article>
   </div>
  </div>
 </section>
 <section class="closing" id="conversa">
  <div class="wrap closing-grid">
-  <div class="reveal"><div class="eyebrow">06 / O próximo movimento</div><h2>SUA OPERAÇÃO<br>NÃO PRECISA<br>FUNCIONAR EM ILHAS.</h2></div>
-  <div class="reveal"><p>Comece por um processo. Conecte os sistemas envolvidos. Dê contexto às equipes e à inteligência artificial. O Infinity ajuda a transformar pontos isolados em uma operação coordenada.</p><a class="btn" href="#ecossistema">Conheça o ecossistema <span class="arrow" aria-hidden="true">↗</span></a></div>
+  <div class="reveal"><h2>VAMOS CONECTAR<br>O PRÓXIMO<br>MOVIMENTO?</h2></div>
+  <div class="reveal"><p>Comece por um processo. Conecte os sistemas envolvidos. Dê contexto às equipes e à inteligência. O Infinity ajuda a transformar pontos isolados em uma operação coordenada.</p><a class="btn" href="#ecossistema">Explore o ecossistema <span class="arrow" aria-hidden="true">↗</span></a></div>
  </div>
 </section>
 </main>
 <footer><a class="footer-logo" href="#inicio" aria-label="Voltar ao início"><img src="assets/images/infinity-logo.svg" alt="Infinity"></a><span class="footer-meta">Infinity / Inteligência operacional</span><a class="backtop" href="#inicio">Voltar ao topo ↑</a></footer>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 <script>
 document.addEventListener('DOMContentLoaded',()=>{
  const header=document.getElementById('header'),topline=document.getElementById('topline'),nav=document.getElementById('nav'),menu=document.getElementById('menu');
- const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
- let ticking=false;
+ const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;let ticking=false;
  const onScroll=()=>{if(ticking)return;ticking=true;requestAnimationFrame(()=>{const max=document.documentElement.scrollHeight-innerHeight;topline.style.setProperty('--progress',max>0?scrollY/max:0);header.classList.toggle('scrolled',scrollY>35);ticking=false;});};
  addEventListener('scroll',onScroll,{passive:true});onScroll();
  const closeMenu=()=>{nav.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.setAttribute('aria-label','Abrir menu');};
  menu.addEventListener('click',()=>{const open=menu.getAttribute('aria-expanded')!=='true';menu.setAttribute('aria-expanded',String(open));menu.setAttribute('aria-label',open?'Fechar menu':'Abrir menu');nav.classList.toggle('open',open);});
- nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
- addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});
- addEventListener('resize',()=>{if(innerWidth>700)closeMenu();},{passive:true});
+ nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu();});addEventListener('resize',()=>{if(innerWidth>700)closeMenu();},{passive:true});
  const links=[...nav.querySelectorAll('a[href^="#"]')],sections=links.map(a=>document.querySelector(a.getAttribute('href'))).filter(Boolean);
- if('IntersectionObserver'in window){const sectionObserver=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){const active=links.find(a=>a.getAttribute('href')==='#'+entry.target.id);links.forEach(a=>a===active?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));}}),{rootMargin:'-30% 0px -60% 0px'});sections.forEach(s=>sectionObserver.observe(s));}
+ if('IntersectionObserver'in window){const io=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){const active=links.find(a=>a.getAttribute('href')==='#'+entry.target.id);links.forEach(a=>a===active?a.setAttribute('aria-current','location'):a.removeAttribute('aria-current'));}}),{rootMargin:'-30% 0px -60% 0px'});sections.forEach(s=>io.observe(s));}
  document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener('click',e=>{const target=document.querySelector(a.getAttribute('href'));if(!target)return;e.preventDefault();target.scrollIntoView({behavior:reduce?'auto':'smooth',block:'start'});if(history.replaceState)history.replaceState(null,'',a.getAttribute('href'));}));
  const reveals=[...document.querySelectorAll('.reveal')];
- if(!reduce&&'IntersectionObserver'in window){
-  document.documentElement.classList.add('motion-ready');
-  reveals.forEach(el=>el.classList.add('is-pending'));
-  const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('is-pending');entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});
-  reveals.forEach(el=>observer.observe(el));
- }
- const initGsap=()=>{
-  if(reduce||!window.gsap||!window.ScrollTrigger)return;
-  gsap.registerPlugin(ScrollTrigger);
-  gsap.from('.hero-copy .eyebrow',{y:18,opacity:0,duration:.7,ease:'power3.out',delay:.12});
-  gsap.from('#hero-title',{y:42,opacity:0,duration:1,ease:'power4.out',delay:.22});
-  gsap.from('.hero-lede,.hero-actions,.hero-note',{y:20,opacity:0,duration:.8,stagger:.12,ease:'power3.out',delay:.48});
-  gsap.from('.orbit-node,.core',{scale:.88,opacity:0,duration:1,stagger:.12,ease:'power3.out',delay:.35});
-  gsap.to('.visual-orbit',{rotation:338,duration:70,ease:'none',repeat:-1});
-  gsap.utils.toArray('.eco-card').forEach((card,i)=>gsap.from(card,{y:34,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:card,start:'top 88%'}}));
-  gsap.from('.flow-step',{y:22,opacity:0,stagger:.13,duration:.7,ease:'power3.out',scrollTrigger:{trigger:'.flow-board',start:'top 78%'}});
-  gsap.from('.story-visual img',{scale:.9,opacity:0,duration:1,ease:'power3.out',scrollTrigger:{trigger:'.story',start:'top 72%'}});
-  ScrollTrigger.refresh();
- };
- if(document.readyState==='complete')initGsap();else addEventListener('load',initGsap,{once:true});
+ if(!reduce&&'IntersectionObserver'in window){document.documentElement.classList.add('motion-ready');reveals.forEach(el=>el.classList.add('is-pending'));const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.remove('is-pending');entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.12,rootMargin:'0px 0px -5% 0px'});reveals.forEach(el=>observer.observe(el));}
 });
 </script>
 </body>
