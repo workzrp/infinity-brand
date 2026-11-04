@@ -157,13 +157,32 @@ footer{padding-top:25px;padding-bottom:25px}
 }
 @media(max-width:380px){h1{font-size:44px}.manifesto h2,.app-head h2,.mascot-copy h2{font-size:42px}.closing h2{font-size:39px}.gallery figcaption{font-size:8px}}
 
+
+/* Hero: hierarquia limpa e sem sobreposição com o cabeçalho */
+.hero{display:block}
+.hero-content{position:absolute;inset:0;max-width:1500px;margin:0 auto;padding:clamp(150px,18vh,190px) var(--pad) 76px;display:flex;flex-direction:column;justify-content:space-between}
+.hero-kicker{display:none!important}
+h1{font-size:clamp(46px,7.5vw,112px)!important;line-height:.96!important;max-width:1200px!important;letter-spacing:-.055em!important}
+h1 span{white-space:nowrap}
+.hero-bottom{margin:0;align-items:flex-end}
+.hero-bottom p{max-width:48ch}
+@media(max-width:760px){
+ .hero{height:92svh;min-height:680px;max-height:900px}
+ .hero-content{padding:132px 22px 48px}
+ h1{font-size:clamp(38px,9vw,58px)!important;line-height:1!important}
+ h1 span{white-space:nowrap}
+ .hero-bottom{margin:0}
+ .hero-bottom p{font-size:14px;max-width:36ch}
+}
+@media(max-width:360px){h1{font-size:36px!important}}
+
 </style>
 </head>
 <body>
 <div class="topline" id="topline"></div>
 <header id="header"><a class="logo" href="#inicio" aria-label="Infinity AI — início"><img src="assets/images/infinity-logo.svg" alt="Infinity AI"></a><button class="menu" id="menu" aria-label="Abrir menu" aria-expanded="false">☰</button><nav class="nav" id="nav"><a href="#essencia">Essência</a><a href="#sistema">Sistema visual</a><a href="#aplicacoes">Aplicações</a><a href="#mascote">Mascote</a><a class="nav-cta" href="#fim">Infinity AI ↗</a></nav></header>
 <main id="inicio">
-<section class="hero"><div class="hero-bg"><img src="assets/images/hero-cover.svg" alt="" fetchpriority="high"></div><div class="hero-content"><div class="hero-kicker"><span class="live-dot"></span><span class="mono">Identidade visual / Infinity AI</span></div><h1>INTELIGÊNCIA<span>EM MOVIMENTO.</span></h1><div class="hero-bottom"><p>Uma identidade criada para traduzir o encontro entre pessoas, tecnologia e resultados — em uma marca que está sempre em evolução.</p><a class="scroll-link" href="#essencia"><i>↓</i> Explore a identidade</a></div></div></section>
+<section class="hero"><div class="hero-bg"><img src="assets/images/hero-cover.svg" alt="" fetchpriority="high"></div><div class="hero-content"><h1>INTELIGÊNCIA<span>EM MOVIMENTO.</span></h1><div class="hero-bottom"><p>Uma identidade criada para traduzir o encontro entre pessoas, tecnologia e resultados — em uma marca que está sempre em evolução.</p><a class="scroll-link" href="#essencia"><i>↓</i> Explore a identidade</a></div></div></section>
 <div class="ticker"><div class="ticker-track"><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span><span>Humanidade <b>×</b> Tecnologia <b>×</b> Movimento <b>×</b> Inteligência <b>×</b> Possibilidades <b>×</b></span></div></div>
 <section class="manifesto" id="essencia"><div class="wrap manifesto-grid"><div class="reveal"><div class="eyebrow">01 / A essência</div><h2>O FUTURO NÃO É UM DESTINO.<br><em>É MOVIMENTO.</em></h2></div><div class="manifesto-copy reveal"><p>A Infinity AI nasce da conexão entre <strong>pessoas, tecnologia e resultados</strong>. Uma marca que traduz inteligência em possibilidades e transforma complexidade em experiências mais simples.</p><p>Seu universo visual parte do símbolo do infinito: continuidade, conexão e evolução sem limites.</p><img class="manifesto-mark" src="assets/images/infinity-ribbon.webp" alt="Elemento gráfico inspirado no símbolo do infinito" loading="lazy"></div></div></section>
 <section class="statement"><div class="statement-art"><img src="assets/images/infinity-glass.webp" alt="" loading="lazy"></div><div class="wrap statement-content reveal"><div class="eyebrow">02 / O conceito</div><h2>UMA IDEIA.<br><span>INFINITAS</span><br>POSSIBILIDADES.</h2><p>As curvas contínuas do símbolo inspiram uma linguagem visual fluida, dinâmica e reconhecível. Um sistema que conecta cada ponto da experiência.</p></div></section>
